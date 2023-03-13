@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/utils.dart';
 
-class Scene extends StatelessWidget {
-  const Scene({super.key});
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +47,7 @@ class Scene extends StatelessWidget {
                       child: Center(
                         child: Text(
                           'Contact Us',
-                          style: SafeGoogleFont(
+                          style: safeGoogleFont(
                             'Inter',
                             fontSize: 32 * ffem,
                             fontWeight: FontWeight.w400,
@@ -84,7 +84,7 @@ class Scene extends StatelessWidget {
                         height: 116 * fem,
                         child: Text(
                           'Arthur’s A/C',
-                          style: SafeGoogleFont(
+                          style: safeGoogleFont(
                             'Bebas Neue',
                             fontSize: 96 * ffem,
                             fontWeight: FontWeight.w400,
@@ -105,7 +105,7 @@ class Scene extends StatelessWidget {
                         height: 30 * fem,
                         child: Text(
                           'Heating & Cooling',
-                          style: SafeGoogleFont(
+                          style: safeGoogleFont(
                             'Inter',
                             fontSize: 24 * ffem,
                             fontWeight: FontWeight.w400,
@@ -126,7 +126,7 @@ class Scene extends StatelessWidget {
                         height: 49 * fem,
                         child: Text(
                           'The best price in Tampa bay area',
-                          style: SafeGoogleFont(
+                          style: safeGoogleFont(
                             'Inter',
                             fontSize: 40 * ffem,
                             fontWeight: FontWeight.w400,
@@ -147,7 +147,7 @@ class Scene extends StatelessWidget {
                         height: 30 * fem,
                         child: Text(
                           'Hight quality installation & services',
-                          style: SafeGoogleFont(
+                          style: safeGoogleFont(
                             'Inter',
                             fontSize: 24 * ffem,
                             fontWeight: FontWeight.w400,
@@ -190,7 +190,7 @@ class Scene extends StatelessWidget {
                                 0 * fem, 0 * fem, 1003 * fem, 0 * fem),
                             child: Text(
                               'Arthur’s A/C',
-                              style: SafeGoogleFont(
+                              style: safeGoogleFont(
                                 'Besley',
                                 fontSize: 24 * ffem,
                                 fontWeight: FontWeight.w400,
@@ -209,7 +209,7 @@ class Scene extends StatelessWidget {
                                 Text(
                                   // homePW5 (5:6)
                                   'Home',
-                                  style: SafeGoogleFont(
+                                  style: safeGoogleFont(
                                     'Inter',
                                     fontSize: 24 * ffem,
                                     fontWeight: FontWeight.w400,
@@ -223,7 +223,7 @@ class Scene extends StatelessWidget {
                                 Text(
                                   // aboutus3ad (5:7)
                                   'About Us',
-                                  style: SafeGoogleFont(
+                                  style: safeGoogleFont(
                                     'Inter',
                                     fontSize: 24 * ffem,
                                     fontWeight: FontWeight.w400,
@@ -237,7 +237,7 @@ class Scene extends StatelessWidget {
                                 Text(
                                   // servicesY1b (5:9)
                                   'Services',
-                                  style: SafeGoogleFont(
+                                  style: safeGoogleFont(
                                     'Inter',
                                     fontSize: 24 * ffem,
                                     fontWeight: FontWeight.w400,
@@ -251,7 +251,7 @@ class Scene extends StatelessWidget {
                                 Text(
                                   // contactuspUu (5:8)
                                   'Contact Us',
-                                  style: SafeGoogleFont(
+                                  style: safeGoogleFont(
                                     'Inter',
                                     fontSize: 24 * ffem,
                                     fontWeight: FontWeight.w400,
@@ -321,7 +321,7 @@ class Scene extends StatelessWidget {
                                             0 * fem, 0 * fem, 29 * fem),
                                         child: Text(
                                           'Contact',
-                                          style: SafeGoogleFont(
+                                          style: safeGoogleFont(
                                             'Inter',
                                             fontSize: 36 * ffem,
                                             fontWeight: FontWeight.w400,
@@ -340,7 +340,7 @@ class Scene extends StatelessWidget {
                                         child: Text(
                                           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. \n',
                                           textAlign: TextAlign.center,
-                                          style: SafeGoogleFont(
+                                          style: safeGoogleFont(
                                             'Inter',
                                             fontSize: 24 * ffem,
                                             fontWeight: FontWeight.w400,
@@ -388,7 +388,7 @@ class Scene extends StatelessWidget {
                                             0 * fem, 0 * fem, 35 * fem),
                                         child: Text(
                                           'About Us',
-                                          style: SafeGoogleFont(
+                                          style: safeGoogleFont(
                                             'Inter',
                                             fontSize: 36 * ffem,
                                             fontWeight: FontWeight.w400,
@@ -405,7 +405,7 @@ class Scene extends StatelessWidget {
                                         child: Text(
                                           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis dapibus nunc.\n\nSuspendisse consequat sollicitudin quam ut viverra. Suspendisse non nunc posuere, luctus lorem malesuada, rhoncus urna. Aenean varius laoreet nulla et pellentesque',
                                           textAlign: TextAlign.center,
-                                          style: SafeGoogleFont(
+                                          style: safeGoogleFont(
                                             'Inter',
                                             fontSize: 24 * ffem,
                                             fontWeight: FontWeight.w400,
@@ -448,7 +448,7 @@ class Scene extends StatelessWidget {
                                     0 * fem, 0 * fem, 0 * fem, 29 * fem),
                                 child: Text(
                                   'Other',
-                                  style: SafeGoogleFont(
+                                  style: safeGoogleFont(
                                     'Inter',
                                     fontSize: 36 * ffem,
                                     fontWeight: FontWeight.w400,
@@ -465,7 +465,7 @@ class Scene extends StatelessWidget {
                                 child: Text(
                                   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis dapibus nunc.\n',
                                   textAlign: TextAlign.center,
-                                  style: SafeGoogleFont(
+                                  style: safeGoogleFont(
                                     'Inter',
                                     fontSize: 24 * ffem,
                                     fontWeight: FontWeight.w400,
@@ -509,7 +509,7 @@ class Scene extends StatelessWidget {
                                           0 * fem, 0 * fem, 0 * fem, 121 * fem),
                                       child: Text(
                                         'Why Choose Us',
-                                        style: SafeGoogleFont(
+                                        style: safeGoogleFont(
                                           'Inter',
                                           fontSize: 36 * ffem,
                                           fontWeight: FontWeight.w400,
@@ -557,7 +557,7 @@ class Scene extends StatelessWidget {
                                                       11 * fem),
                                                   child: Text(
                                                     'Lorem ipsum',
-                                                    style: SafeGoogleFont(
+                                                    style: safeGoogleFont(
                                                       'Inter',
                                                       fontSize: 24 * ffem,
                                                       fontWeight:
@@ -576,7 +576,7 @@ class Scene extends StatelessWidget {
                                                   ),
                                                   child: Text(
                                                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                                                    style: SafeGoogleFont(
+                                                    style: safeGoogleFont(
                                                       'Inter',
                                                       fontSize: 24 * ffem,
                                                       fontWeight:
@@ -631,7 +631,7 @@ class Scene extends StatelessWidget {
                                                       11 * fem),
                                                   child: Text(
                                                     'Lorem ipsum',
-                                                    style: SafeGoogleFont(
+                                                    style: safeGoogleFont(
                                                       'Inter',
                                                       fontSize: 24 * ffem,
                                                       fontWeight:
@@ -650,7 +650,7 @@ class Scene extends StatelessWidget {
                                                   ),
                                                   child: Text(
                                                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                                                    style: SafeGoogleFont(
+                                                    style: safeGoogleFont(
                                                       'Inter',
                                                       fontSize: 24 * ffem,
                                                       fontWeight:
@@ -719,7 +719,7 @@ class Scene extends StatelessWidget {
                                                       11 * fem),
                                                   child: Text(
                                                     'Lorem ipsum',
-                                                    style: SafeGoogleFont(
+                                                    style: safeGoogleFont(
                                                       'Inter',
                                                       fontSize: 24 * ffem,
                                                       fontWeight:
@@ -738,7 +738,7 @@ class Scene extends StatelessWidget {
                                                   ),
                                                   child: Text(
                                                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                                                    style: SafeGoogleFont(
+                                                    style: safeGoogleFont(
                                                       'Inter',
                                                       fontSize: 24 * ffem,
                                                       fontWeight:
@@ -793,7 +793,7 @@ class Scene extends StatelessWidget {
                                                       11 * fem),
                                                   child: Text(
                                                     'Lorem ipsum',
-                                                    style: SafeGoogleFont(
+                                                    style: safeGoogleFont(
                                                       'Inter',
                                                       fontSize: 24 * ffem,
                                                       fontWeight:
@@ -812,7 +812,7 @@ class Scene extends StatelessWidget {
                                                   ),
                                                   child: Text(
                                                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                                                    style: SafeGoogleFont(
+                                                    style: safeGoogleFont(
                                                       'Inter',
                                                       fontSize: 24 * ffem,
                                                       fontWeight:
@@ -870,7 +870,7 @@ class Scene extends StatelessWidget {
                         height: 44 * fem,
                         child: Text(
                           'Our Services',
-                          style: SafeGoogleFont(
+                          style: safeGoogleFont(
                             'Inter',
                             fontSize: 36 * ffem,
                             fontWeight: FontWeight.w400,
@@ -891,7 +891,7 @@ class Scene extends StatelessWidget {
                         height: 59 * fem,
                         child: Text(
                           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis dapibus nunc. Vivamus tincidunt iaculis arcu, nec scelerisque diam convallis id.',
-                          style: SafeGoogleFont(
+                          style: safeGoogleFont(
                             'Inter',
                             fontSize: 24 * ffem,
                             fontWeight: FontWeight.w400,
@@ -976,7 +976,7 @@ class Scene extends StatelessWidget {
                         height: 30 * fem,
                         child: Text(
                           'Name Service1',
-                          style: SafeGoogleFont(
+                          style: safeGoogleFont(
                             'Inter',
                             fontSize: 24 * ffem,
                             fontWeight: FontWeight.w400,
@@ -997,7 +997,7 @@ class Scene extends StatelessWidget {
                         height: 30 * fem,
                         child: Text(
                           'Name Service3',
-                          style: SafeGoogleFont(
+                          style: safeGoogleFont(
                             'Inter',
                             fontSize: 24 * ffem,
                             fontWeight: FontWeight.w400,
@@ -1018,7 +1018,7 @@ class Scene extends StatelessWidget {
                         height: 30 * fem,
                         child: Text(
                           'Name Service2',
-                          style: SafeGoogleFont(
+                          style: safeGoogleFont(
                             'Inter',
                             fontSize: 24 * ffem,
                             fontWeight: FontWeight.w400,
@@ -1046,7 +1046,7 @@ class Scene extends StatelessWidget {
                         0 * fem, 0 * fem, 0 * fem, 48 * fem),
                     child: Text(
                       'Meet our clients',
-                      style: SafeGoogleFont(
+                      style: safeGoogleFont(
                         'Inter',
                         fontSize: 36 * ffem,
                         fontWeight: FontWeight.w400,
@@ -1098,7 +1098,7 @@ class Scene extends StatelessWidget {
                                     child: Text(
                                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis dapibus nunc.',
                                       textAlign: TextAlign.center,
-                                      style: SafeGoogleFont(
+                                      style: safeGoogleFont(
                                         'Inter',
                                         fontSize: 20 * ffem,
                                         fontWeight: FontWeight.w400,
@@ -1119,7 +1119,7 @@ class Scene extends StatelessWidget {
                                     height: 30 * fem,
                                     child: Text(
                                       'Nombre y apellidos',
-                                      style: SafeGoogleFont(
+                                      style: safeGoogleFont(
                                         'Inter',
                                         fontSize: 24 * ffem,
                                         fontWeight: FontWeight.w400,
@@ -1140,7 +1140,7 @@ class Scene extends StatelessWidget {
                                     height: 25 * fem,
                                     child: Text(
                                       'Calificacion',
-                                      style: SafeGoogleFont(
+                                      style: safeGoogleFont(
                                         'Inter',
                                         fontSize: 20 * ffem,
                                         fontWeight: FontWeight.w400,
@@ -1209,7 +1209,7 @@ class Scene extends StatelessWidget {
                                     child: Text(
                                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis dapibus nunc.',
                                       textAlign: TextAlign.center,
-                                      style: SafeGoogleFont(
+                                      style: safeGoogleFont(
                                         'Inter',
                                         fontSize: 20 * ffem,
                                         fontWeight: FontWeight.w400,
@@ -1248,7 +1248,7 @@ class Scene extends StatelessWidget {
                                     height: 30 * fem,
                                     child: Text(
                                       'Nombre y apellidos',
-                                      style: SafeGoogleFont(
+                                      style: safeGoogleFont(
                                         'Inter',
                                         fontSize: 24 * ffem,
                                         fontWeight: FontWeight.w400,
@@ -1269,7 +1269,7 @@ class Scene extends StatelessWidget {
                                     height: 25 * fem,
                                     child: Text(
                                       'Calificacion',
-                                      style: SafeGoogleFont(
+                                      style: safeGoogleFont(
                                         'Inter',
                                         fontSize: 20 * ffem,
                                         fontWeight: FontWeight.w400,
@@ -1318,7 +1318,7 @@ class Scene extends StatelessWidget {
                                     child: Text(
                                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis dapibus nunc.',
                                       textAlign: TextAlign.center,
-                                      style: SafeGoogleFont(
+                                      style: safeGoogleFont(
                                         'Inter',
                                         fontSize: 20 * ffem,
                                         fontWeight: FontWeight.w400,
@@ -1339,7 +1339,7 @@ class Scene extends StatelessWidget {
                                     height: 30 * fem,
                                     child: Text(
                                       'Nombre y apellidos',
-                                      style: SafeGoogleFont(
+                                      style: safeGoogleFont(
                                         'Inter',
                                         fontSize: 24 * ffem,
                                         fontWeight: FontWeight.w400,
@@ -1360,7 +1360,7 @@ class Scene extends StatelessWidget {
                                     height: 25 * fem,
                                     child: Text(
                                       'Calificacion',
-                                      style: SafeGoogleFont(
+                                      style: safeGoogleFont(
                                         'Inter',
                                         fontSize: 20 * ffem,
                                         fontWeight: FontWeight.w400,
@@ -1425,7 +1425,7 @@ class Scene extends StatelessWidget {
                                     child: Text(
                                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis dapibus nunc.',
                                       textAlign: TextAlign.center,
-                                      style: SafeGoogleFont(
+                                      style: safeGoogleFont(
                                         'Inter',
                                         fontSize: 20 * ffem,
                                         fontWeight: FontWeight.w400,
@@ -1446,7 +1446,7 @@ class Scene extends StatelessWidget {
                                     height: 30 * fem,
                                     child: Text(
                                       'Nombre y apellidos',
-                                      style: SafeGoogleFont(
+                                      style: safeGoogleFont(
                                         'Inter',
                                         fontSize: 24 * ffem,
                                         fontWeight: FontWeight.w400,
@@ -1467,7 +1467,7 @@ class Scene extends StatelessWidget {
                                     height: 25 * fem,
                                     child: Text(
                                       'Calificacion',
-                                      style: SafeGoogleFont(
+                                      style: safeGoogleFont(
                                         'Inter',
                                         fontSize: 20 * ffem,
                                         fontWeight: FontWeight.w400,
@@ -1505,7 +1505,7 @@ class Scene extends StatelessWidget {
                   Text(
                     // seemoreYzH (26:103)
                     'See more',
-                    style: SafeGoogleFont(
+                    style: safeGoogleFont(
                       'Inter',
                       fontSize: 24 * ffem,
                       fontWeight: FontWeight.w400,
