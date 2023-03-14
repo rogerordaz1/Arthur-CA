@@ -8,8 +8,10 @@ import 'package:google_fonts/google_fonts.dart';
 class AppTheme {
   static const Color primaryColor = Color(0xFF282A3F);
   static const Color secondaryColor = Color(0xFFa86a3a);
+  static const Color commonColorWithe = Color(0xFFe2e2e8);
   static const Color scaffoldBackgroundColor = Color(0xFFe2e2e8);
   static const Color fontInterColor = Color(0xFFE2E2E8);
+  static const answerColor = Color(0xFFFFFFFF);
 
   //TODO: Agregar los demas estilos como el de la letra etc...
 
@@ -19,31 +21,28 @@ class AppTheme {
   static const Color dividerColor = Color(0xFFD9DB26);
   static const correctAnswerColor = Color(0xFFFACAFA);
   static const questionTextColor = Color(0xFFF8E1F8);
-  static const answerColor = Color(0xFFFFFFFF);
 
   //TODO : Definir el tamano de las letras en base al responsive..
   static TextStyle companyHeaderText = GoogleFonts.bebasNeue(
     textStyle: const TextStyle(
-      color: AppTheme.correctAnswerColor,
-      fontSize: 20.0,
-      fontWeight: FontWeight.bold,
+      color: AppTheme.commonColorWithe,
+      textBaseline: TextBaseline.ideographic,
+      fontSize: 100.0,
+      fontWeight: FontWeight.w300,
     ),
   );
   static TextStyle headerLogoText = GoogleFonts.besley(
     textStyle: const TextStyle(
-      color: AppTheme.correctAnswerColor,
-      fontSize: 20.0,
-      fontWeight: FontWeight.bold,
+      color: AppTheme.commonColorWithe,
+      fontSize: 28.0,
     ),
   );
 
   static TextStyle primaryFontType = GoogleFonts.inter(
     textStyle: const TextStyle(
-      color: AppTheme.fontInterColor,
-      fontSize: 20.0,
-      fontWeight: FontWeight.bold,
+      color: AppTheme.commonColorWithe,
+      fontSize: 24,
+      fontWeight: FontWeight.w200,
     ),
   );
-
-  
 }
