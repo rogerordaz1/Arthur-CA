@@ -10,8 +10,9 @@ class AppTheme {
   static const Color secondaryColor = Color(0xFFa86a3a);
   static const Color scaffoldBackgroundColor = Color(0xFFe2e2e8);
   static const Color fontInterColor = Color(0xFFE2E2E8);
+  static const Color headerSectionColorBackground = Color(0xfffefefe);
 
-  //TODO: Agregar los demas estilos como el de la letra etc...
+ 
 
   static const Color appBarBackgroundColor = Color(0xFF2C6F2E);
   static const Color boxDecorationColor = Color(0xFFC5DA28);
@@ -21,7 +22,9 @@ class AppTheme {
   static const questionTextColor = Color(0xFFF8E1F8);
   static const answerColor = Color(0xFFFFFFFF);
 
-  //TODO : Definir el tamano de las letras en base al responsive..
+  
+
+  
   static TextStyle companyHeaderText = GoogleFonts.bebasNeue(
     textStyle: const TextStyle(
       color: AppTheme.correctAnswerColor,

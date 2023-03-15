@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/utils.dart';
+import 'package:myapp/core/utils/utils.dart';
 import 'package:myapp/features/homePage/presentation/pages/home_page.dart';
 // import 'package:myapp/page-1/color-palete.dart';
 
