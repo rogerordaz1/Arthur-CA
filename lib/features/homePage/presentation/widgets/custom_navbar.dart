@@ -1,48 +1,85 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../core/theme/app_theme.dart';
-import '../../../../core/utils/responsive.dart';
 
 class CustomNavBar extends StatelessWidget {
   const CustomNavBar({
     super.key,
-  
   });
-
-  
 
   @override
   Widget build(BuildContext context) {
-    final Responsive resp = Responsive.of(context);
     return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.end,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text(
-          "Arthur’s A/C",
-          style: AppTheme.headerLogoText,
+        Row(
+          children: [
+            SizedBox(
+              height: 109,
+              child: Image.asset('page-1/images/logo.png'),
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 15),
+                  child: Text(
+                    'ARTHUR A/C',
+                    style: GoogleFonts.bebasNeue(
+                      textStyle: const TextStyle(
+                          color: Color(0xFFFCFCFC),
+                          fontSize: 48.0,
+                          fontWeight: FontWeight.w300,
+                          height: 0.4),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 0),
+                Text(
+                  'Heating & Cooling',
+                  style: GoogleFonts.inter(
+                    textStyle: const TextStyle(
+                      color: Color(0xFFFCFCFC),
+                      fontSize: 24.0,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                )
+              ],
+            )
+          ],
         ),
         const Spacer(),
-        Text(
-          "Home",
-          style: AppTheme.primaryFontType,
-        ),
-        SizedBox(width: resp.wp(1.5)),
-        Text(
-          "About Us",
-          style: AppTheme.primaryFontType,
-        ),
-        SizedBox(width: resp.wp(1.5)),
-        Text(
-          "Services",
-          style: AppTheme.primaryFontType,
-        ),
-        SizedBox(width: resp.wp(1.5)),
-        Text(
-          "Contact Us",
-          style: AppTheme.primaryFontType,
-        ),
+        NavBarItem(isActive: true, press: () {}, text: "Home"),
+        const SizedBox(width: 46),
+        NavBarItem(isActive: false, press: () {}, text: "About Us"),
+        const SizedBox(width: 46),
+        NavBarItem(isActive: false, press: () {}, text: "Services"),
+        const SizedBox(width: 46),
+        NavBarItem(isActive: false, press: () {}, text: "Contact Us"),
       ],
+    );
+  }
+}
+
+class NavBarItem extends StatelessWidget {
+  const NavBarItem({
+    super.key,
+    required this.text,
+    required this.isActive,
+    required this.press,
+  });
+  final String text;
+  final bool isActive;
+  final VoidCallback press;
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: isActive ? AppTheme.secondaryFontType : AppTheme.primaryFontType,
     );
   }
 }

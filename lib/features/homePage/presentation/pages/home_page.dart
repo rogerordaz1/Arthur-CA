@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/core/theme/app_theme.dart';
 
 import '../../../../core/utils/responsive.dart';
 import '../widgets/main_header_section.dart';
@@ -10,10 +11,10 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final Responsive resp = Responsive.of(context);
     return Scaffold(
+      backgroundColor: AppTheme.answerColor,
       body: Column(
         children: const [
           MainHeaderSection(),
-          Text("Flutter Web Rocks"),
         ],
       ),
     );

@@ -9,6 +9,7 @@ class AppTheme {
   static const Color primaryColor = Color(0xFF282A3F);
   static const Color secondaryColor = Color(0xFFa86a3a);
   static const Color commonColorWithe = Color(0xFFe2e2e8);
+  static const Color whiteFcfcfc = Color(0xFFFCFCFC);
   static const Color scaffoldBackgroundColor = Color(0xFFe2e2e8);
   static const Color fontInterColor = Color(0xFFE2E2E8);
   static const answerColor = Color(0xFFFFFFFF);
@@ -33,16 +34,23 @@ class AppTheme {
   );
   static TextStyle headerLogoText = GoogleFonts.besley(
     textStyle: const TextStyle(
-      color: AppTheme.commonColorWithe,
-      fontSize: 28.0,
-    ),
+        color: AppTheme.commonColorWithe,
+        fontSize: 24.0,
+        fontWeight: FontWeight.w400),
   );
 
   static TextStyle primaryFontType = GoogleFonts.inter(
     textStyle: const TextStyle(
-      color: AppTheme.commonColorWithe,
+      color: AppTheme.whiteFcfcfc,
       fontSize: 24,
-      fontWeight: FontWeight.w200,
+      fontWeight: FontWeight.w700,
+    ),
+  );
+  static TextStyle secondaryFontType = GoogleFonts.inter(
+    textStyle: const TextStyle(
+      color: AppTheme.primaryColor,
+      fontSize: 24,
+      fontWeight: FontWeight.w700,
     ),
   );
 }
