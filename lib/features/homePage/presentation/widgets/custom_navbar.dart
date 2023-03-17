@@ -32,8 +32,8 @@ class CustomNavBar extends StatelessWidget {
                       textStyle: const TextStyle(
                           color: Color(0xFFFCFCFC),
                           fontSize: 48.0,
-                          fontWeight: FontWeight.w300,
-                          height: 0.4),
+                          fontWeight: FontWeight.w400,
+                          height: 0.8),
                     ),
                   ),
                 ),
@@ -43,8 +43,8 @@ class CustomNavBar extends StatelessWidget {
                   style: GoogleFonts.inter(
                     textStyle: const TextStyle(
                       color: Color(0xFFFCFCFC),
-                      fontSize: 24.0,
-                      fontWeight: FontWeight.w700,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.w400,
                     ),
                   ),
                 )
@@ -79,7 +79,8 @@ class NavBarItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: isActive ? AppTheme.secondaryFontType : AppTheme.primaryFontType,
+      style:
+          isActive ? AppTheme.secondaryFontType : AppTheme.noActiveNavBarLink,
     );
   }
 }

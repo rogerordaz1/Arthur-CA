@@ -10,6 +10,7 @@ class AppTheme {
   static const Color secondaryColor = Color(0xFFa86a3a);
   static const Color commonColorWithe = Color(0xFFe2e2e8);
   static const Color whiteFcfcfc = Color(0xFFFCFCFC);
+  static const Color knoActiveNavabarLink = Color(0xFF8E8F9C);
   static const Color scaffoldBackgroundColor = Color(0xFFe2e2e8);
   static const Color fontInterColor = Color(0xFFE2E2E8);
   static const answerColor = Color(0xFFFFFFFF);
@@ -46,9 +47,16 @@ class AppTheme {
       fontWeight: FontWeight.w700,
     ),
   );
+  static TextStyle noActiveNavBarLink = GoogleFonts.inter(
+    textStyle: const TextStyle(
+      color: AppTheme.knoActiveNavabarLink,
+      fontSize: 24,
+      fontWeight: FontWeight.w700,
+    ),
+  );
   static TextStyle secondaryFontType = GoogleFonts.inter(
     textStyle: const TextStyle(
-      color: AppTheme.primaryColor,
+      color: AppTheme.whiteFcfcfc,
       fontSize: 24,
       fontWeight: FontWeight.w700,
     ),

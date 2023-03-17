@@ -14,24 +14,20 @@ class MainHeaderSection extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage(
-                  'page-1/images/fondo.jpg',
-                ),
-                fit: BoxFit.cover,
-                opacity: 10),
-          ),
+          color: const Color(0xff282a3f).withOpacity(0.3),
           height: 933,
           width: double.infinity,
           child: Container(
-            color: const Color(0xff282a3f)
-                .withOpacity(0.3), // establece un color gris semitransparente
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(
+                  'page-1/images/fondoArturo.jpg',
+                ),
+                fit: BoxFit.cover,
+              ),
+            ),
             height: 933,
             width: double.infinity,
-            child: CustomPaint(
-              painter: CustomRectanglePainter(),
-            ),
           ),
         ),
         const ColumnSectionOne()
@@ -55,7 +51,7 @@ class ColumnSectionOne extends StatelessWidget {
           child: CustomNavBar(),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 233, vertical: 143),
+          padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 143),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -80,7 +76,7 @@ class ColumnSectionOne extends StatelessWidget {
                 ),
               ),
               Text(
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nMauris quis dapibus nunc. Vivamus tincidunt iaculis arcu,\nnec scelerisque diam convallis id.",
+                "Our company focuses on the satisfaction of our\ncustomers with quality services and guarantee at all\ntimes. We work for you",
                 textAlign: TextAlign.start,
                 style: GoogleFonts.inter(
                   textStyle: const TextStyle(
@@ -90,8 +86,6 @@ class ColumnSectionOne extends StatelessWidget {
                   ),
                 ),
               ),
-
-              
             ],
           ),
         )
