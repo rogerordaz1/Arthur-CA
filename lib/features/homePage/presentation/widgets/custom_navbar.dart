@@ -17,7 +17,7 @@ class CustomNavBar extends StatelessWidget {
         Row(
           children: [
             SizedBox(
-              height: 109,
+              height: 103,
               child: Image.asset('page-1/images/logo.png'),
             ),
             Column(
@@ -33,7 +33,7 @@ class CustomNavBar extends StatelessWidget {
                           color: Color(0xFFFCFCFC),
                           fontSize: 48.0,
                           fontWeight: FontWeight.w400,
-                          height: 0.8),
+                          height: 0.5),
                     ),
                   ),
                 ),
@@ -54,8 +54,6 @@ class CustomNavBar extends StatelessWidget {
         ),
         const Spacer(),
         NavBarItem(isActive: true, press: () {}, text: "Home"),
-        const SizedBox(width: 46),
-        NavBarItem(isActive: false, press: () {}, text: "About Us"),
         const SizedBox(width: 46),
         NavBarItem(isActive: false, press: () {}, text: "Services"),
         const SizedBox(width: 46),

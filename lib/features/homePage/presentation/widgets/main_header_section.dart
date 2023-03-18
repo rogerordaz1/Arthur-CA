@@ -26,7 +26,9 @@ class MainHeaderSection extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-            constraints: const BoxConstraints(maxWidth: 1920),
+            constraints: const BoxConstraints(
+              maxWidth: 1920,
+            ),
           ),
         ),
         const ColumnSectionOne()
