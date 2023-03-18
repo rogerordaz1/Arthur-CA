@@ -12,10 +12,12 @@ class HomePage extends StatelessWidget {
     final Responsive resp = Responsive.of(context);
     return Scaffold(
       backgroundColor: AppTheme.answerColor,
-      body: Column(
-        children: const [
-          MainHeaderSection(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: const [
+            MainHeaderSection(),
+          ],
+        ),
       ),
     );
   }

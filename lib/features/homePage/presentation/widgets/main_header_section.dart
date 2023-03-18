@@ -15,7 +15,7 @@ class MainHeaderSection extends StatelessWidget {
       children: [
         Container(
           color: const Color(0xff282a3f).withOpacity(0.3),
-          height: 933,
+          height: 1092,
           width: double.infinity,
           child: Container(
             decoration: const BoxDecoration(
@@ -26,8 +26,7 @@ class MainHeaderSection extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-            height: 933,
-            width: double.infinity,
+            constraints: const BoxConstraints(maxWidth: 1920),
           ),
         ),
         const ColumnSectionOne()
@@ -75,16 +74,28 @@ class ColumnSectionOne extends StatelessWidget {
                   ),
                 ),
               ),
-              Text(
-                "Our company focuses on the satisfaction of our\ncustomers with quality services and guarantee at all\ntimes. We work for you",
+              RichText(
+                text: TextSpan(
+                    text:
+                        "Our company focuses on the satisfaction of our\ncustomers with quality services and guarantee at all\ntimes.",
+                    style: GoogleFonts.inter(
+                      textStyle: const TextStyle(
+                        color: AppTheme.whiteFcfcfc,
+                        fontSize: 32,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                    children: const [
+                      TextSpan(
+                        text: ' We work for you',
+                        style: TextStyle(
+                          color: AppTheme.whiteFcfcfc,
+                          fontSize: 32,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      )
+                    ]),
                 textAlign: TextAlign.start,
-                style: GoogleFonts.inter(
-                  textStyle: const TextStyle(
-                    color: AppTheme.whiteFcfcfc,
-                    fontSize: 32,
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
               ),
             ],
           ),
