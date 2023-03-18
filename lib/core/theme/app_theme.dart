@@ -47,6 +47,20 @@ class AppTheme {
       fontWeight: FontWeight.w700,
     ),
   );
+  static TextStyle whyChooseUsTitleTextStyle = GoogleFonts.inter(
+    textStyle: const TextStyle(
+      color: AppTheme.primaryColor,
+      fontSize: 24,
+      fontWeight: FontWeight.w700,
+    ),
+  );
+  static TextStyle whyChooseUsDescriptionTextStyle = GoogleFonts.inter(
+    textStyle: const TextStyle(
+      color: AppTheme.primaryColor,
+      fontSize: 24,
+      fontWeight: FontWeight.w400,
+    ),
+  );
   static TextStyle noActiveNavBarLink = GoogleFonts.inter(
     textStyle: const TextStyle(
       color: AppTheme.knoActiveNavabarLink,
