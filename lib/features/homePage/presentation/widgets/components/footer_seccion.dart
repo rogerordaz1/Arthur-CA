@@ -13,13 +13,16 @@ class FooterSeccion extends StatelessWidget {
         Column(
           children: const [
             FooterPart1(),
-            FooterPart2(),
           ],
         ),
         const Positioned(
           left: 60,
           bottom: 180,
           child: Picture(),
+        ),
+        const Positioned(
+          bottom: 0,
+          child: FooterPart2(),
         ),
       ],
     );

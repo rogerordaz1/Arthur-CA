@@ -61,7 +61,7 @@ class FooterPart1 extends StatelessWidget {
                       style: TextStyle(color: Colors.white, fontSize: 32)),
                   const SizedBox(height: 67),
                   const RowBoxMinRectangle(),
-                  const SizedBox(height: 127),
+                  const SizedBox(height: 427),
                   //Text("data"),
                 ],
               ),

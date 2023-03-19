@@ -12,6 +12,7 @@ class FooterPart2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 300,
+      width: MediaQuery.of(context).size.width,
       color: AppTheme.secondaryColor,
       child: Row(
           // mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -44,34 +45,37 @@ class FooterPart2 extends StatelessWidget {
                   const SizedBox(
                     height: 70,
                   ),
-                  SizedBox(
-                      width: 600,
-                      // height: 150,
-                      child: RichText(
-                        text: TextSpan(
-                            text:
-                                "We are a development team specialized in creating websites and mobile applications. We work for and with the client, we guarantee a quality service of excellence.\n",
-                            style: GoogleFonts.inter(
-                              textStyle: const TextStyle(
+                  Expanded(
+                    child: Container(
+                        //color: Colors.red,
+                        // width: 600,
+                        // height: 150,
+                        child: RichText(
+                      text: TextSpan(
+                          text:
+                              "We are a development team specialized in creating\nwebsites and mobile applications. We work for and with\nthe client, we guarantee a quality service of excellence.\n",
+                          style: GoogleFonts.inter(
+                            textStyle: const TextStyle(
+                              color: AppTheme.whiteFcfcfc,
+                              fontSize: 24,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                          children: const [
+                            TextSpan(
+                              text: 'Visit our website and contact us',
+                              style: TextStyle(
                                 color: AppTheme.whiteFcfcfc,
                                 fontSize: 24,
-                                fontWeight: FontWeight.w400,
+                                fontWeight: FontWeight.w700,
                               ),
-                            ),
-                            children: const [
-                              TextSpan(
-                                text: 'Visit our website and contact us',
-                                style: TextStyle(
-                                  color: AppTheme.whiteFcfcfc,
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.w700,
-                                ),
-                              )
-                            ]),
-                        textAlign: TextAlign.start,
-                      )),
+                            )
+                          ]),
+                      //  textAlign: TextAlign.start,
+                    )),
+                  ),
                   Expanded(
-                    flex: 2,
+                    flex: 1,
                     child: Row(
                       children: const [
                         Text(
@@ -90,7 +94,10 @@ class FooterPart2 extends StatelessWidget {
                   )
                 ],
               ),
-            )
+            ),
+            // const SizedBox(
+            //   width: 1000,
+            // )
           ]),
     );
   }
