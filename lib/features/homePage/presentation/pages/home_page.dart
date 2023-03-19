@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -10,6 +11,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
+
     return Scaffold(
       backgroundColor: AppTheme.answerColor,
       body: SingleChildScrollView(
@@ -27,14 +30,16 @@ class HomePage extends StatelessWidget {
               padding: EdgeInsets.only(left: 202, right: 202, bottom: 100),
               child: WhyChooseUsSection(),
             ),
-            const OurServicesSection()
+            const OurServicesSection(),
+            const EmergencyServiceSection(),
+
+            OurWorkSection(list: list)
           ],
         ),
       ),
     );
   }
 }
-
 
 
 

@@ -1,3 +1,9 @@
+export 'package:myapp/features/homePage/presentation/widgets/components/carrusel_items.dart';
+
+export 'package:myapp/features/homePage/presentation/widgets/components/our_work_section.dart';
+
+export 'package:myapp/features/homePage/presentation/widgets/components/emergency_service_section.dart';
+
 export 'package:myapp/features/homePage/presentation/widgets/components/our_services_section.dart';
 
 export 'package:myapp/features/homePage/presentation/widgets/components/our_services_row_item.dart';
@@ -15,3 +21,4 @@ export 'package:myapp/features/homePage/presentation/widgets/components/custom_c
 export 'package:myapp/features/homePage/presentation/widgets/components/main_cards_section.dart';
 
 export 'package:myapp/features/homePage/presentation/widgets/components/contact_us_button.dart';
+
