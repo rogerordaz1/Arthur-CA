@@ -13,6 +13,8 @@ class OurWorkSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    CarouselController buttonCarouselController = CarouselController();
+
     return Column(
       children: [
         Text(
@@ -28,16 +30,21 @@ class OurWorkSection extends StatelessWidget {
         const SizedBox(height: 50),
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 80),
-          child: CarouselSlider.builder(
-            itemCount: list.length,
-            itemBuilder:
-                (BuildContext context, int itemIndex, int pageViewIndex) =>
-                    CarruselItmes(indexPage: itemIndex, widgets: list),
-            options: CarouselOptions(
-              autoPlay: true,
-              enableInfiniteScroll: true,
-              initialPage: 0,
-              viewportFraction: 1,
+          child: SingleChildScrollView(
+            child: CarouselSlider.builder(
+              carouselController: buttonCarouselController,
+              itemCount: list.length,
+              itemBuilder:
+                  (BuildContext context, int itemIndex, int pageViewIndex) =>
+                      CarruselItmes(indexPage: itemIndex, widgets: list),
+              options: CarouselOptions(
+                
+                height: 500,
+                autoPlay: true,
+                enableInfiniteScroll: true,
+                initialPage: 0,
+                viewportFraction: 1,
+              ),
             ),
           ),
         ),

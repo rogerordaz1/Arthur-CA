@@ -22,3 +22,10 @@ export 'package:myapp/features/homePage/presentation/widgets/components/main_car
 
 export 'package:myapp/features/homePage/presentation/widgets/components/contact_us_button.dart';
 
+export '../widgets/components/footer_seccion.dart';
+
+export 'package:myapp/features/homePage/presentation/widgets/components/footer_part1.dart';
+
+export '../widgets/components/contact_seccion.dart';
+
+export 'package:myapp/features/homePage/presentation/widgets/components/footer_part2.dart';
