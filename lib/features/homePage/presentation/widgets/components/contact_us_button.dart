@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../../core/theme/app_theme.dart';
 import '../../../../../utils.dart';
@@ -17,7 +18,9 @@ class ContactUsButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           backgroundColor: AppTheme.secondaryColor,
         ),
-        onPressed: () {},
+        onPressed: () async {
+          await LaunchUrl();
+        },
         child: Center(
           child: Text(
             'Contact Us',
@@ -31,5 +34,17 @@ class ContactUsButton extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+Future<void> LaunchUrl() async {
+  final Uri params = Uri(
+    scheme: 'mailto',
+    path: 'arthurhvac13@gmail.com',
+  );
+  final Uri url = Uri.parse('https://flutter.dev');
+
+  if (!await launchUrl(params)) {
+    throw Exception('Could not launch $url');
   }
 }
