@@ -79,14 +79,14 @@ class FooterPart2 extends StatelessWidget {
                     child: Row(
                       children: const [
                         Text(
-                          "jhondoe.com",
+                          "Code Genius",
                           style: TextStyle(color: Colors.white, fontSize: 24),
                         ),
                         SizedBox(
                           width: 100,
                         ),
                         Text(
-                          "jhonedoe@gmail.com",
+                          "codegenius98@gmail.com",
                           style: TextStyle(color: Colors.white, fontSize: 24),
                         ),
                       ],

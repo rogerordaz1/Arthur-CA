@@ -31,19 +31,14 @@ class EmergencyServiceSection extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 80),
+                  const SizedBox(height: 200),
                   const EmergencyServiceRowItem(
                     textLeft:
                         'Our company has a 24\nemergency service for any\nunexpected situation that\nmay arise for any of our\nclients.',
                     textRight:
-                        'Our company has a 24\nemergency service for any\nunexpected situation that\nmay arise for any of our\nclients.',
+                        'We also have staff available and prepared for this type of situation, all to guarantee the safety and comfort of our clients and our services.',
                   ),
-                  const SizedBox(height: 80),
-                  const EmergencyServiceRowItem(
-                      textLeft:
-                          'We also have staff available and prepared for this type of situation, all to guarantee the safety and comfort of our clients and our services.',
-                      textRight:
-                          'We also have staff available and prepared for this type of situation, all to guarantee the safety and comfort of our clients and our services.')
+                  const SizedBox(height: 40),
                 ],
               ),
             ),
@@ -88,7 +83,7 @@ class EmergencyServiceRowItem extends StatelessWidget {
                 '\u2022',
                 style: TextStyle(
                   fontSize: 50,
-                  height: 0.9,
+                  height: 0.5,
                 ),
               ),
               const SizedBox(width: 10),
@@ -107,7 +102,6 @@ class EmergencyServiceRowItem extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(width: 50),
         Expanded(
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -116,7 +110,7 @@ class EmergencyServiceRowItem extends StatelessWidget {
                 '\u2022',
                 style: TextStyle(
                   fontSize: 50,
-                  height: 0.9,
+                  height: 0.5,
                 ),
               ),
               const SizedBox(width: 10),
