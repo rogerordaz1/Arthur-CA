@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_framework/responsive_value.dart';
+import 'package:responsive_framework/responsive_wrapper.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../../core/theme/app_theme.dart';
@@ -12,8 +14,18 @@ class ContactUsButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 478,
-      height: 113,
+      width: ResponsiveValue(context, defaultValue: 478.0, valueWhen: [
+        const Condition.smallerThan(
+          name: TABLET,
+          value: 325.72,
+        ),
+      ]).value,
+      height: ResponsiveValue(context, defaultValue: 113.0, valueWhen: [
+        const Condition.smallerThan(
+          name: TABLET,
+          value: 82.0,
+        ),
+      ]).value,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           backgroundColor: AppTheme.secondaryColor,
@@ -26,7 +38,13 @@ class ContactUsButton extends StatelessWidget {
             'Contact Us',
             style: safeGoogleFont(
               'Inter',
-              fontSize: 32,
+              fontSize:
+                  ResponsiveValue(context, defaultValue: 32.0, valueWhen: [
+                const Condition.smallerThan(
+                  name: TABLET,
+                  value: 24.0,
+                ),
+              ]).value,
               fontWeight: FontWeight.w700,
               color: const Color(0xffe2e2e8),
             ),

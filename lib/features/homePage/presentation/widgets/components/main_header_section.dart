@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/core/theme/app_theme.dart';
+import 'package:responsive_framework/responsive_value.dart';
+import 'package:responsive_framework/responsive_wrapper.dart';
 
 import '../widgets.dart';
 
@@ -18,13 +20,14 @@ class MainHeaderSection extends StatelessWidget {
           height: 1092,
           width: double.infinity,
           child: Container(
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage(
-                  'assets/fondoArturo.jpg',
-                ),
-                fit: BoxFit.cover,
-              ),
+                  image: AssetImage(
+                    ResponsiveWrapper.of(context).isSmallerThan(TABLET)
+                        ? 'assets/fondo-movil.jpg'
+                        : 'assets/fondoArturo.jpg',
+                  ),
+                  fit: BoxFit.cover),
             ),
             constraints: const BoxConstraints(
               maxWidth: 1920,
@@ -48,7 +51,10 @@ class ColumnSectionOne extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 110, vertical: 19),
+          padding: EdgeInsets.symmetric(
+            horizontal: 110,
+            vertical: 19,
+          ),
           child: CustomNavBar(),
         ),
         Padding(
@@ -59,9 +65,16 @@ class ColumnSectionOne extends StatelessWidget {
               Text(
                 "Hight quality installation & services",
                 style: GoogleFonts.inter(
-                  textStyle: const TextStyle(
+                  textStyle: TextStyle(
                     color: AppTheme.whiteFcfcfc,
-                    fontSize: 32,
+                    fontSize: ResponsiveValue(context,
+                        defaultValue: 32.0,
+                        valueWhen: [
+                          const Condition.smallerThan(
+                            name: TABLET,
+                            value: 20.0,
+                          ),
+                        ]).value,
                     fontWeight: FontWeight.w400,
                   ),
                 ),
@@ -69,9 +82,16 @@ class ColumnSectionOne extends StatelessWidget {
               Text(
                 "Residential & Comercial".toUpperCase(),
                 style: GoogleFonts.bebasNeue(
-                  textStyle: const TextStyle(
+                  textStyle: TextStyle(
                     color: AppTheme.whiteFcfcfc,
-                    fontSize: 96,
+                    fontSize: ResponsiveValue(context,
+                        defaultValue: 96.0,
+                        valueWhen: [
+                          const Condition.smallerThan(
+                            name: TABLET,
+                            value: 64.0,
+                          ),
+                        ]).value,
                     fontWeight: FontWeight.w400,
                   ),
                 ),
@@ -81,18 +101,32 @@ class ColumnSectionOne extends StatelessWidget {
                     text:
                         "Our company focuses on the satisfaction of our\ncustomers with quality services and guarantee at all\ntimes.",
                     style: GoogleFonts.inter(
-                      textStyle: const TextStyle(
+                      textStyle: TextStyle(
                         color: AppTheme.whiteFcfcfc,
-                        fontSize: 32,
+                        fontSize: ResponsiveValue(context,
+                            defaultValue: 32.0,
+                            valueWhen: [
+                              const Condition.smallerThan(
+                                name: TABLET,
+                                value: 24.0,
+                              ),
+                            ]).value,
                         fontWeight: FontWeight.w400,
                       ),
                     ),
-                    children: const [
+                    children: [
                       TextSpan(
                         text: ' We work for you',
                         style: TextStyle(
                           color: AppTheme.whiteFcfcfc,
-                          fontSize: 32,
+                          fontSize: ResponsiveValue(context,
+                              defaultValue: 32.0,
+                              valueWhen: [
+                                const Condition.smallerThan(
+                                  name: TABLET,
+                                  value: 24.0,
+                                ),
+                              ]).value,
                           fontWeight: FontWeight.w700,
                         ),
                       )

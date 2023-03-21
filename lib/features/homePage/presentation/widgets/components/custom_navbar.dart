@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../../../../core/theme/app_theme.dart';
 
@@ -17,7 +18,12 @@ class CustomNavBar extends StatelessWidget {
         Row(
           children: [
             SizedBox(
-              height: 103,
+              height: ResponsiveValue(context, defaultValue: 109.0, valueWhen: [
+                const Condition.smallerThan(
+                  name: TABLET,
+                  value: 82.0,
+                ),
+              ]).value,
               child: Image.asset('assets/logo.png'),
             ),
             Column(
@@ -29,11 +35,19 @@ class CustomNavBar extends StatelessWidget {
                   child: Text(
                     'ARTHUR A/C',
                     style: GoogleFonts.bebasNeue(
-                      textStyle: const TextStyle(
-                          color: Color(0xFFFCFCFC),
-                          fontSize: 48.0,
-                          fontWeight: FontWeight.w400,
-                          height: 0.5),
+                      textStyle: TextStyle(
+                        color: const Color(0xFFFCFCFC),
+                        fontSize: ResponsiveValue(context,
+                            defaultValue: 48.0,
+                            valueWhen: [
+                              const Condition.smallerThan(
+                                name: TABLET,
+                                value: 40.0,
+                              ),
+                            ]).value,
+                        fontWeight: FontWeight.w400,
+                        height: 0.5,
+                      ),
                     ),
                   ),
                 ),
@@ -41,9 +55,16 @@ class CustomNavBar extends StatelessWidget {
                 Text(
                   'Heating & Cooling',
                   style: GoogleFonts.inter(
-                    textStyle: const TextStyle(
-                      color: Color(0xFFFCFCFC),
-                      fontSize: 20.0,
+                    textStyle: TextStyle(
+                      color: const Color(0xFFFCFCFC),
+                      fontSize: ResponsiveValue(context,
+                          defaultValue: 20.0,
+                          valueWhen: [
+                            const Condition.smallerThan(
+                              name: TABLET,
+                              value: 16.0,
+                            ),
+                          ]).value,
                       fontWeight: FontWeight.w400,
                     ),
                   ),
@@ -77,8 +98,33 @@ class NavBarItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style:
-          isActive ? AppTheme.secondaryFontType : AppTheme.noActiveNavBarLink,
+      style: isActive
+          ? GoogleFonts.inter(
+              textStyle: TextStyle(
+                color: AppTheme.whiteFcfcfc,
+                fontSize:
+                    ResponsiveValue(context, defaultValue: 24.0, valueWhen: [
+                  const Condition.smallerThan(
+                    name: TABLET,
+                    value: 20.0,
+                  ),
+                ]).value,
+                fontWeight: FontWeight.w700,
+              ),
+            )
+          : GoogleFonts.inter(
+              textStyle: TextStyle(
+                color: AppTheme.knoActiveNavabarLink,
+                fontSize:
+                    ResponsiveValue(context, defaultValue: 24.0, valueWhen: [
+                  const Condition.smallerThan(
+                    name: TABLET,
+                    value: 20.0,
+                  ),
+                ]).value,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
     );
   }
 }

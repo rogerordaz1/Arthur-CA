@@ -17,11 +17,11 @@ class MyApp extends StatelessWidget {
         ClampingScrollWrapper(child: child!),
         maxWidth: 2500,
         minWidth: 300,
-        defaultScale: true,
+        defaultScale: false,
         breakpoints: [
           const ResponsiveBreakpoint.autoScaleDown(1920, name: DESKTOP),
-          const ResponsiveBreakpoint.resize(480, name: MOBILE),
-          // const ResponsiveBreakpoint.resize(1280, name: TABLET),
+          const ResponsiveBreakpoint.resize(1280, name: TABLET),
+          // const ResponsiveBreakpoint.resize(450, name: MOBILE),
         ],
         background: Container(
           color: const Color(0xFFF5F5F5),
