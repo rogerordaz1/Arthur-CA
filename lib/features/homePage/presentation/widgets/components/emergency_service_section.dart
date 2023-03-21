@@ -49,7 +49,7 @@ class EmergencyServiceSection extends StatelessWidget {
               padding: const EdgeInsets.only(top: 100),
               height: 751,
               child: Image.asset(
-                'assets/page-1/images/truck.png',
+                'assets/truck.png',
                 fit: BoxFit.fill,
               ),
             ),

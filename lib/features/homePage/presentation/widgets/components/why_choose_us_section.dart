@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../../../core/theme/app_theme.dart';
 import '../widgets.dart';
 
-
 class WhyChooseUsSection extends StatelessWidget {
   const WhyChooseUsSection({
     super.key,
@@ -31,7 +30,7 @@ class WhyChooseUsSection extends StatelessWidget {
           children: const [
             Expanded(
               child: RowItemWhyUsSection(
-                picture: 'assets/page-1/images/titulo.png',
+                picture: 'assets/titulo.png',
                 title: 'Quality',
                 subtitle:
                     'Our work is carried out with the highest quality, the greatest cleanliness and care possible to achieve satisfied customers and happy with our service.',
@@ -39,7 +38,7 @@ class WhyChooseUsSection extends StatelessWidget {
             ),
             Expanded(
               child: RowItemWhyUsSection(
-                picture: 'assets/page-1/images/efi.png',
+                picture: 'assets/efi.png',
                 title: 'Efficiency',
                 subtitle:
                     'Efficiency and effectiveness go hand in hand in our work, to guarantee an excellent service and the fastest to satisfy our customers.',
@@ -47,7 +46,7 @@ class WhyChooseUsSection extends StatelessWidget {
             ),
             Expanded(
               child: RowItemWhyUsSection(
-                picture: 'assets/page-1/images/garantia.png',
+                picture: 'assets/garantia.png',
                 title: 'Guarantee',
                 subtitle:
                     'Our company is responsible for the quality of the work carried out and therefore we guarantee 100% the same to all our clients.',
@@ -55,7 +54,7 @@ class WhyChooseUsSection extends StatelessWidget {
             ),
             Expanded(
               child: RowItemWhyUsSection(
-                picture: 'assets/page-1/images/calif.png',
+                picture: 'assets/calif.png',
                 title: 'Experience',
                 subtitle:
                     'Experience accompanies us in this service, with the greatest satisfaction for our customers. We are a company based on strong work foundations.',

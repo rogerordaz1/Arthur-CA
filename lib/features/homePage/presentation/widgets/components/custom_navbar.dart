@@ -18,7 +18,7 @@ class CustomNavBar extends StatelessWidget {
           children: [
             SizedBox(
               height: 103,
-              child: Image.asset('page-1/images/logo.png'),
+              child: Image.asset('assets/logo.png'),
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
