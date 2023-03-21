@@ -46,20 +46,20 @@ class OurServicesSection extends StatelessWidget {
               children: const [
                 Expanded(
                   child: OurServicesRowItem(
-                    photo: 'assets/page-1/images/image2.JPG',
+                    photo: 'assets/image2.JPG',
                     description: 'Machine installation',
                   ),
                 ),
                 SizedBox(width: 40),
                 Expanded(
                     child: OurServicesRowItem(
-                  photo: 'assets/page-1/images/image4.JPG',
+                  photo: 'assets/image4.JPG',
                   description: 'Ductwork',
                 )),
                 SizedBox(width: 40),
                 Expanded(
                   child: OurServicesRowItem(
-                      photo: 'assets/page-1/images/image3.JPG',
+                      photo: 'assets/image3.JPG',
                       description: 'Maintenance and others'),
                 ),
               ],

@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/core/theme/app_theme.dart';
 
-import '../../../../../utils.dart';
-import 'components.dart';
 import '../widgets.dart';
 
 class MainHeaderSection extends StatelessWidget {
@@ -23,7 +21,7 @@ class MainHeaderSection extends StatelessWidget {
             decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
-                  'page-1/images/fondoArturo.jpg',
+                  'assets/fondoArturo.jpg',
                 ),
                 fit: BoxFit.cover,
               ),
@@ -137,5 +135,3 @@ class CustomRectanglePainter extends CustomPainter {
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) => true;
 }
-
-

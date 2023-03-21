@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/features/homePage/presentation/pages/home_page.dart';
+import 'package:myapp/features/homePage/presentation/pages/home_web_page.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 // import 'package:myapp/page-1/color-palete.dart';
@@ -20,8 +20,8 @@ class MyApp extends StatelessWidget {
         defaultScale: true,
         breakpoints: [
           const ResponsiveBreakpoint.autoScaleDown(1920, name: DESKTOP),
+          const ResponsiveBreakpoint.resize(480, name: MOBILE),
           // const ResponsiveBreakpoint.resize(1280, name: TABLET),
-          // const ResponsiveBreakpoint.resize(480, name: MOBILE),
         ],
         background: Container(
           color: const Color(0xFFF5F5F5),
