@@ -25,6 +25,10 @@ class MainHeaderSection extends StatelessWidget {
                 name: 't999',
                 value: 953.0,
               ),
+              const Condition.smallerThan(
+                name: 'm600',
+                value: 926.0,
+              ),
             ],
           ).value!,
           width: double.infinity,
@@ -69,6 +73,10 @@ class ColumnSectionOne extends StatelessWidget {
                   name: 't999',
                   value: 30.0,
                 ),
+                const Condition.smallerThan(
+                  breakpoint: 600,
+                  value: 15.0,
+                ),
               ],
             ).value!,
             vertical: ResponsiveValue(
@@ -79,6 +87,10 @@ class ColumnSectionOne extends StatelessWidget {
                   name: 't999',
                   value: 30.0,
                 ),
+                const Condition.smallerThan(
+                  breakpoint: 600,
+                  value: 15.0,
+                ),
               ],
             ).value!,
           ),
@@ -86,17 +98,31 @@ class ColumnSectionOne extends StatelessWidget {
         ),
         Padding(
           padding: EdgeInsets.symmetric(
-              horizontal: ResponsiveValue(
-                context,
-                defaultValue: 100.0,
-                valueWhen: [
-                  const Condition.smallerThan(
-                    name: 't999',
-                    value: 40.0,
-                  ),
-                ],
-              ).value!,
-              vertical: 143),
+            horizontal: ResponsiveValue(
+              context,
+              defaultValue: 100.0,
+              valueWhen: [
+                const Condition.smallerThan(
+                  name: 'm600',
+                  value: 15.0,
+                ),
+                const Condition.smallerThan(
+                  name: 't999',
+                  value: 40.0,
+                ),
+              ],
+            ).value!,
+            vertical: ResponsiveValue(
+              context,
+              defaultValue: 143.0,
+              valueWhen: [
+                const Condition.smallerThan(
+                  name: 'm600',
+                  value: 133.0,
+                ),
+              ],
+            ).value!,
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -129,6 +155,10 @@ class ColumnSectionOne extends StatelessWidget {
                             name: TABLET,
                             value: 64.0,
                           ),
+                          const Condition.smallerThan(
+                            name: 'm600',
+                            value: 45.0,
+                          ),
                         ]).value,
                     fontWeight: FontWeight.w400,
                   ),
@@ -137,7 +167,7 @@ class ColumnSectionOne extends StatelessWidget {
               RichText(
                 text: TextSpan(
                     text:
-                        "Our company focuses on the satisfaction of our\ncustomers with quality services and guarantee at all\ntimes.",
+                        "Our company focuses on the satisfaction\nof ourcustomers with quality services and\nguarantee at all times.",
                     style: GoogleFonts.inter(
                       textStyle: TextStyle(
                         color: AppTheme.whiteFcfcfc,
@@ -147,6 +177,10 @@ class ColumnSectionOne extends StatelessWidget {
                               const Condition.smallerThan(
                                 name: TABLET,
                                 value: 24.0,
+                              ),
+                              const Condition.smallerThan(
+                                name: 'm600',
+                                value: 20.0,
                               ),
                             ]).value,
                         fontWeight: FontWeight.w400,
@@ -163,6 +197,10 @@ class ColumnSectionOne extends StatelessWidget {
                                 const Condition.smallerThan(
                                   name: TABLET,
                                   value: 24.0,
+                                ),
+                                const Condition.smallerThan(
+                                  name: 'm600',
+                                  value: 20.0,
                                 ),
                               ]).value,
                           fontWeight: FontWeight.w700,

@@ -23,6 +23,10 @@ class FooterPart2 extends StatelessWidget {
           const Condition.smallerThan(
             name: 't999',
             value: 580.0,
+          ),
+          const Condition.smallerThan(
+            name: 'm600',
+            value: 475.0,
           )
         ],
       ).value,
@@ -31,17 +35,47 @@ class FooterPart2 extends StatelessWidget {
       child: LayoutBuilder(builder: (context, constraints) {
         if (ResponsiveWrapper.of(context).isSmallerThan(TABLET)) {
           return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 83, vertical: 70),
+            padding: EdgeInsets.symmetric(
+              horizontal: ResponsiveValue(
+                context,
+                defaultValue: 83.0,
+                valueWhen: [
+                  const Condition.smallerThan(
+                    name: 'm600',
+                    value: 30.0,
+                  )
+                ],
+              ).value!,
+              vertical: ResponsiveValue(
+                context,
+                defaultValue: 70.0,
+                valueWhen: [
+                  const Condition.smallerThan(
+                    name: 'm600',
+                    value: 30.0,
+                  )
+                ],
+              ).value!,
+            ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   "ARTHUR A/C",
                   style: GoogleFonts.bebasNeue(
-                    textStyle: const TextStyle(
+                    textStyle: TextStyle(
                       color: AppTheme.commonColorWithe,
                       textBaseline: TextBaseline.ideographic,
-                      fontSize: 70.0,
+                      fontSize: ResponsiveValue(
+                        context,
+                        defaultValue: 70.0,
+                        valueWhen: [
+                          const Condition.smallerThan(
+                            name: 'm600',
+                            value: 40.0,
+                          )
+                        ],
+                      ).value!,
                       fontWeight: FontWeight.w400,
                     ),
                   ),
@@ -49,10 +83,19 @@ class FooterPart2 extends StatelessWidget {
                 Text(
                   "Heating & Cooling",
                   style: GoogleFonts.inter(
-                    textStyle: const TextStyle(
+                    textStyle: TextStyle(
                       color: AppTheme.commonColorWithe,
                       textBaseline: TextBaseline.ideographic,
-                      fontSize: 24.0,
+                      fontSize: ResponsiveValue(
+                        context,
+                        defaultValue: 24.0,
+                        valueWhen: [
+                          const Condition.smallerThan(
+                            name: 'm600',
+                            value: 20.0,
+                          )
+                        ],
+                      ).value!,
                       fontWeight: FontWeight.w400,
                     ),
                   ),
@@ -63,7 +106,7 @@ class FooterPart2 extends StatelessWidget {
                 RichText(
                   text: TextSpan(
                     text:
-                        "We are a development team specialized in creating\nwebsites and mobile applications. We work for and with\nthe client, we guarantee a quality service of excellence.\n",
+                        "We are a development team specialized in creating websites and mobile applications. We work for and with the client, we guarantee a quality service of excellence.",
                     style: GoogleFonts.inter(
                       textStyle: TextStyle(
                         color: AppTheme.whiteFcfcfc,
@@ -74,6 +117,10 @@ class FooterPart2 extends StatelessWidget {
                             const Condition.smallerThan(
                               name: 't999',
                               value: 24.0,
+                            ),
+                            const Condition.smallerThan(
+                              name: 'm600',
+                              value: 20.0,
                             )
                           ],
                         ).value,
@@ -92,6 +139,10 @@ class FooterPart2 extends StatelessWidget {
                               const Condition.smallerThan(
                                 name: 't999',
                                 value: 24.0,
+                              ),
+                              const Condition.smallerThan(
+                                name: 'm600',
+                                value: 20.0,
                               )
                             ],
                           ).value,
@@ -101,17 +152,59 @@ class FooterPart2 extends StatelessWidget {
                     ],
                   ),
                 ),
+                const SizedBox(height: 40),
                 Expanded(
-                  child: Row(
-                    children: const [
-                      Text(
-                        "Code Genius",
-                        style: TextStyle(color: Colors.white, fontSize: 32),
+                  child: ResponsiveRowColumn(
+                    layout: ResponsiveWrapper.of(context).isSmallerThan('m600')
+                        ? ResponsiveRowColumnType.COLUMN
+                        : ResponsiveRowColumnType.ROW,
+                    columnCrossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      ResponsiveRowColumnItem(
+                        child: Text(
+                          "Code Genius",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: ResponsiveValue(
+                              context,
+                              defaultValue: 30.0,
+                              valueWhen: [
+                                const Condition.smallerThan(
+                                  name: 't999',
+                                  value: 24.0,
+                                ),
+                                const Condition.smallerThan(
+                                  name: 'm600',
+                                  value: 20.0,
+                                )
+                              ],
+                            ).value,
+                          ),
+                        ),
                       ),
-                      SizedBox(width: 100),
-                      Text(
-                        "codegenius98@gmail.com",
-                        style: TextStyle(color: Colors.white, fontSize: 32),
+                      const ResponsiveRowColumnItem(
+                          child: SizedBox(width: 100)),
+                      ResponsiveRowColumnItem(
+                        child: Text(
+                          "codegenius98@gmail.com",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: ResponsiveValue(
+                              context,
+                              defaultValue: 30.0,
+                              valueWhen: [
+                                const Condition.smallerThan(
+                                  name: 't999',
+                                  value: 24.0,
+                                ),
+                                const Condition.smallerThan(
+                                  name: 'm600',
+                                  value: 20.0,
+                                )
+                              ],
+                            ).value,
+                          ),
+                        ),
                       ),
                     ],
                   ),

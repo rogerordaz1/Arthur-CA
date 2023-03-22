@@ -23,15 +23,30 @@ class CustomNavBar extends StatelessWidget {
                   name: TABLET,
                   value: 82.0,
                 ),
+                const Condition.smallerThan(
+                  name: 'm600',
+                  value: 53.0,
+                ),
               ]).value,
-              child: Image.asset('assets/logo.png'),
+              child: Image.asset(
+                'assets/logo.png',
+              ),
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 15),
+                  padding: EdgeInsets.only(
+                    top: ResponsiveValue(context,
+                        defaultValue: 15.0,
+                        valueWhen: [
+                          const Condition.smallerThan(
+                            name: 'm600',
+                            value: 7.0,
+                          ),
+                        ]).value!,
+                  ),
                   child: Text(
                     'ARTHUR A/C',
                     style: GoogleFonts.bebasNeue(
@@ -43,6 +58,10 @@ class CustomNavBar extends StatelessWidget {
                               const Condition.smallerThan(
                                 name: TABLET,
                                 value: 40.0,
+                              ),
+                              const Condition.smallerThan(
+                                name: 'm600',
+                                value: 30.0,
                               ),
                             ]).value,
                         fontWeight: FontWeight.w400,
@@ -63,6 +82,10 @@ class CustomNavBar extends StatelessWidget {
                               name: TABLET,
                               value: 16.0,
                             ),
+                            const Condition.smallerThan(
+                              name: 'm600',
+                              value: 13.0,
+                            ),
                           ]).value,
                       fontWeight: FontWeight.w400,
                     ),
@@ -73,11 +96,36 @@ class CustomNavBar extends StatelessWidget {
           ],
         ),
         const Spacer(),
-        NavBarItem(isActive: true, press: () {}, text: "Home"),
-        const SizedBox(width: 46),
-        NavBarItem(isActive: false, press: () {}, text: "Services"),
-        const SizedBox(width: 46),
-        NavBarItem(isActive: false, press: () {}, text: "Contact Us"),
+        ResponsiveVisibility(
+          hiddenWhen: const [
+            Condition.smallerThan(name: 'm600'),
+          ],
+          child: NavBarItem(isActive: true, press: () {}, text: "Home"),
+        ),
+        const ResponsiveVisibility(
+          hiddenWhen: [
+            Condition.smallerThan(name: 'm600'),
+          ],
+          child: SizedBox(width: 46),
+        ),
+        ResponsiveVisibility(
+          hiddenWhen: const [
+            Condition.smallerThan(name: 'm600'),
+          ],
+          child: NavBarItem(isActive: false, press: () {}, text: "Services"),
+        ),
+        const ResponsiveVisibility(
+          hiddenWhen: [
+            Condition.smallerThan(name: 'm600'),
+          ],
+          child: SizedBox(width: 46),
+        ),
+        ResponsiveVisibility(
+          hiddenWhen: const [
+            Condition.smallerThan(name: 'm600'),
+          ],
+          child: NavBarItem(isActive: false, press: () {}, text: "Contact Us"),
+        ),
         const ResponsiveVisibility(
             visibleWhen: [
               Condition.smallerThan(name: 't999'),
