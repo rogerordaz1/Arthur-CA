@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../../core/theme/app_theme.dart';
 import 'footer_seccion.dart';
@@ -354,3 +355,4 @@ class FooterPart1 extends StatelessWidget {
     );
   }
 }
+
