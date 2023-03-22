@@ -17,7 +17,20 @@ class MainHeaderSection extends StatelessWidget {
       children: [
         Container(
           color: const Color(0xff282a3f).withOpacity(0.3),
-          height: 1092,
+          height: ResponsiveValue(
+            context,
+            defaultValue: 1092.0,
+            valueWhen: [
+              const Condition.smallerThan(
+                name: 't999',
+                value: 953.0,
+              ),
+              const Condition.smallerThan(
+                name: 'm600',
+                value: 926.0,
+              ),
+            ],
+          ).value!,
           width: double.infinity,
           child: Container(
             decoration: BoxDecoration(
@@ -50,15 +63,66 @@ class ColumnSectionOne extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Padding(
+        Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: 110,
-            vertical: 19,
+            horizontal: ResponsiveValue(
+              context,
+              defaultValue: 110.0,
+              valueWhen: [
+                const Condition.smallerThan(
+                  name: 't999',
+                  value: 30.0,
+                ),
+                const Condition.smallerThan(
+                  breakpoint: 600,
+                  value: 15.0,
+                ),
+              ],
+            ).value!,
+            vertical: ResponsiveValue(
+              context,
+              defaultValue: 19.0,
+              valueWhen: [
+                const Condition.smallerThan(
+                  name: 't999',
+                  value: 30.0,
+                ),
+                const Condition.smallerThan(
+                  breakpoint: 600,
+                  value: 15.0,
+                ),
+              ],
+            ).value!,
           ),
-          child: CustomNavBar(),
+          child: const CustomNavBar(),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 143),
+          padding: EdgeInsets.symmetric(
+            horizontal: ResponsiveValue(
+              context,
+              defaultValue: 100.0,
+              valueWhen: [
+                const Condition.smallerThan(
+                  name: 'm600',
+                  value: 15.0,
+                ),
+                const Condition.smallerThan(
+                  name: 't999',
+                  value: 40.0,
+                ),
+              ],
+            ).value!,
+            vertical: ResponsiveValue(
+              context,
+              defaultValue: 143.0,
+              valueWhen: [
+                const Condition.smallerThan(
+                  name: 'm600',
+                  value: 133.0,
+                ),
+              ],
+            ).value!,
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -91,6 +155,10 @@ class ColumnSectionOne extends StatelessWidget {
                             name: TABLET,
                             value: 64.0,
                           ),
+                          const Condition.smallerThan(
+                            name: 'm600',
+                            value: 45.0,
+                          ),
                         ]).value,
                     fontWeight: FontWeight.w400,
                   ),
@@ -99,7 +167,7 @@ class ColumnSectionOne extends StatelessWidget {
               RichText(
                 text: TextSpan(
                     text:
-                        "Our company focuses on the satisfaction of our\ncustomers with quality services and guarantee at all\ntimes.",
+                        "Our company focuses on the satisfaction\nof ourcustomers with quality services and\nguarantee at all times.",
                     style: GoogleFonts.inter(
                       textStyle: TextStyle(
                         color: AppTheme.whiteFcfcfc,
@@ -109,6 +177,10 @@ class ColumnSectionOne extends StatelessWidget {
                               const Condition.smallerThan(
                                 name: TABLET,
                                 value: 24.0,
+                              ),
+                              const Condition.smallerThan(
+                                name: 'm600',
+                                value: 20.0,
                               ),
                             ]).value,
                         fontWeight: FontWeight.w400,
@@ -126,6 +198,10 @@ class ColumnSectionOne extends StatelessWidget {
                                   name: TABLET,
                                   value: 24.0,
                                 ),
+                                const Condition.smallerThan(
+                                  name: 'm600',
+                                  value: 20.0,
+                                ),
                               ]).value,
                           fontWeight: FontWeight.w700,
                         ),
@@ -133,9 +209,20 @@ class ColumnSectionOne extends StatelessWidget {
                     ]),
                 textAlign: TextAlign.start,
               ),
-              const Padding(
-                padding: EdgeInsets.only(top: 174),
-                child: ContactUsButton(),
+              Padding(
+                padding: EdgeInsets.only(
+                  top: ResponsiveValue(
+                    context,
+                    defaultValue: 174.0,
+                    valueWhen: [
+                      const Condition.smallerThan(
+                        name: 't999',
+                        value: 65.0,
+                      ),
+                    ],
+                  ).value!,
+                ),
+                child: const ContactUsButton(),
               ),
             ],
           ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../../../../core/theme/app_theme.dart';
 
@@ -32,9 +33,18 @@ class CustomCard extends StatelessWidget {
           Text(
             title,
             style: GoogleFonts.inter(
-              textStyle: const TextStyle(
+              textStyle: TextStyle(
                 color: AppTheme.whiteFcfcfc,
-                fontSize: 36,
+                fontSize: ResponsiveValue(
+                  context,
+                  defaultValue: 36.0,
+                  valueWhen: [
+                    const Condition.smallerThan(
+                      name: 'm600',
+                      value: 32.0,
+                    ),
+                  ],
+                ).value!,
                 fontWeight: FontWeight.w700,
               ),
             ),
@@ -43,9 +53,18 @@ class CustomCard extends StatelessWidget {
           Text(
             description,
             style: GoogleFonts.inter(
-              textStyle: const TextStyle(
+              textStyle: TextStyle(
                 color: AppTheme.whiteFcfcfc,
-                fontSize: 24,
+                fontSize: ResponsiveValue(
+                  context,
+                  defaultValue: 24.0,
+                  valueWhen: [
+                    const Condition.smallerThan(
+                      name: 'm600',
+                      value: 20.0,
+                    ),
+                  ],
+                ).value!,
                 fontWeight: FontWeight.w400,
               ),
             ),

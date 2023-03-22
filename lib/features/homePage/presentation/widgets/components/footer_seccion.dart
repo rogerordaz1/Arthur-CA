@@ -8,17 +8,10 @@ class FooterSeccion extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Column(
-          children: const [
-            FooterPart1(),
-          ],
-        ),
-        const Positioned(
-          bottom: 0,
-          child: FooterPart2(),
-        ),
+    return Column(
+      children: const [
+        FooterPart1(),
+        FooterPart2(),
       ],
     );
   }
@@ -56,10 +49,9 @@ class Picture extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
         height: 1000,
         width: MediaQuery.of(context).size.width,
-        color: Colors.red,
         child: Image.asset(
           "assets/footer_foto.jpg",
           fit: BoxFit.cover,

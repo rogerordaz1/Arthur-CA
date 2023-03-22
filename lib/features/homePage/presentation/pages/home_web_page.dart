@@ -39,6 +39,10 @@ class _HomePageState extends State<HomePage> {
                           name: TABLET,
                           value: 180.0,
                         ),
+                        const Condition.smallerThan(
+                          name: 'm600',
+                          value: 18.0,
+                        ),
                       ],
                     ).value!,
                   ),
@@ -55,6 +59,10 @@ class _HomePageState extends State<HomePage> {
                         name: TABLET,
                         value: 100.0,
                       ),
+                      const Condition.smallerThan(
+                        name: 'm600',
+                        value: 50.0,
+                      ),
                     ],
                   ).value!,
                   right: ResponsiveValue(
@@ -65,9 +73,23 @@ class _HomePageState extends State<HomePage> {
                         name: TABLET,
                         value: 100.0,
                       ),
+                      const Condition.smallerThan(
+                        name: 'm600',
+                        value: 50.0,
+                      ),
                     ],
                   ).value!,
-                  bottom: 100,
+                  bottom: ResponsiveValue(
+                    context,
+                    defaultValue: 100.0,
+                    valueWhen: [
+                      
+                      const Condition.smallerThan(
+                        name: 'm600',
+                        value: 250.0,
+                      ),
+                    ],
+                  ).value!,
                 ),
                 child: const WhyChooseUsSection(),
               ),

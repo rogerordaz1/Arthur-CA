@@ -19,6 +19,10 @@ class EmergencyServiceSection extends StatelessWidget {
               name: TABLET,
               value: 80.0,
             ),
+            const Condition.smallerThan(
+              name: 'm600',
+              value: 15.0,
+            ),
           ],
         ).value!,
         left: ResponsiveValue(
@@ -28,6 +32,10 @@ class EmergencyServiceSection extends StatelessWidget {
             const Condition.smallerThan(
               name: TABLET,
               value: 80.0,
+            ),
+            const Condition.smallerThan(
+              name: 'm600',
+              value: 15.0,
             ),
           ],
         ).value!,
@@ -104,7 +112,16 @@ class EmergencyServiceSection extends StatelessWidget {
                   ),
                 ],
               ).value!),
-              height: 751,
+              height: ResponsiveValue(
+                context,
+                defaultValue: 750.0,
+                valueWhen: [
+                  const Condition.smallerThan(
+                    name: 'm600',
+                    value: 405.0,
+                  ),
+                ],
+              ).value!,
               child: Image.asset(
                 'assets/truck.png',
                 fit: BoxFit.fill,
@@ -129,11 +146,17 @@ class EmergencyServiceRowItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
+    return ResponsiveRowColumn(
+      columnSpacing: 40,
+      columnPadding: const EdgeInsets.symmetric(horizontal: 30),
+      layout: ResponsiveWrapper.of(context).isSmallerThan('m600')
+          ? ResponsiveRowColumnType.COLUMN
+          : ResponsiveRowColumnType.ROW,
+      rowMainAxisAlignment: MainAxisAlignment.start,
+      rowCrossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Expanded(
+        ResponsiveRowColumnItem(
+          rowFlex: 1,
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -160,7 +183,8 @@ class EmergencyServiceRowItem extends StatelessWidget {
             ],
           ),
         ),
-        Expanded(
+        ResponsiveRowColumnItem(
+          rowFlex: 1,
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -187,9 +211,14 @@ class EmergencyServiceRowItem extends StatelessWidget {
             ],
           ),
         ),
-        const ResponsiveVisibility(hiddenWhen: [
-          Condition.smallerThan(name: TABLET),
-        ], child: SizedBox(width: 50)),
+        const ResponsiveRowColumnItem(
+          child: ResponsiveVisibility(
+            hiddenWhen: [
+              Condition.smallerThan(name: TABLET),
+            ],
+            child: SizedBox(width: 50),
+          ),
+        ),
       ],
     );
   }

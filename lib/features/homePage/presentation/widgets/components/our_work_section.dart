@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 import '../widgets.dart';
 
 class OurWorkSection extends StatelessWidget {
@@ -29,7 +30,18 @@ class OurWorkSection extends StatelessWidget {
         ),
         const SizedBox(height: 50),
         Container(
-          padding: const EdgeInsets.symmetric(horizontal: 80),
+          padding: EdgeInsets.symmetric(
+            horizontal: ResponsiveValue(
+              context,
+              defaultValue: 80.0,
+              valueWhen: [
+                const Condition.smallerThan(
+                  name: TABLET,
+                  value: 20.0,
+                ),
+              ],
+            ).value!,
+          ),
           child: SingleChildScrollView(
             child: CarouselSlider.builder(
               carouselController: buttonCarouselController,
@@ -38,14 +50,29 @@ class OurWorkSection extends StatelessWidget {
                   (BuildContext context, int itemIndex, int pageViewIndex) =>
                       CarruselItmes(indexPage: itemIndex, widgets: list),
               options: CarouselOptions(
-                
-                height: 500,
-                autoPlay: true,
-                enableInfiniteScroll: true,
-                initialPage: 0,
-                viewportFraction: 1,
-              ),
+                  height: ResponsiveValue(
+                    context,
+                    defaultValue: 500.0,
+                    valueWhen: [
+                      const Condition.smallerThan(
+                        name: 't999',
+                        value: 300.0,
+                      )
+                    ],
+                  ).value,
+                  autoPlay: true,
+                  enableInfiniteScroll: true,
+                  initialPage: 0,
+                  viewportFraction: 1,
+                  autoPlayInterval: const Duration(seconds: 8)),
             ),
+          ),
+        ),
+        ResponsiveVisibility(
+          visible: false,
+          visibleWhen: const [Condition.smallerThan(name: 't999')],
+          child: Container(
+            height: 150,
           ),
         ),
       ],

@@ -19,11 +19,19 @@ class ContactUsButton extends StatelessWidget {
           name: TABLET,
           value: 325.72,
         ),
+        const Condition.smallerThan(
+          name: 'm600',
+          value: 251.0,
+        ),
       ]).value,
       height: ResponsiveValue(context, defaultValue: 113.0, valueWhen: [
         const Condition.smallerThan(
           name: TABLET,
           value: 82.0,
+        ),
+        const Condition.smallerThan(
+          name: 'm600',
+          value: 63.0,
         ),
       ]).value,
       child: ElevatedButton(

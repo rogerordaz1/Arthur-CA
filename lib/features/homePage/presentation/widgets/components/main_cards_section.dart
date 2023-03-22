@@ -23,7 +23,28 @@ class MainCardsSection extends StatelessWidget {
             columnOrder: 2,
             rowFlex: 5,
             child: CustomCard(
-              padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 47),
+              padding: EdgeInsets.symmetric(
+                vertical: ResponsiveValue(
+                  context,
+                  defaultValue: 60.0,
+                  valueWhen: [
+                    const Condition.smallerThan(
+                      name: 'm600',
+                      value: 50.0,
+                    ),
+                  ],
+                ).value!,
+                horizontal: ResponsiveValue(
+                  context,
+                  defaultValue: 47.0,
+                  valueWhen: [
+                    const Condition.smallerThan(
+                      name: 'm600',
+                      value: 40.0,
+                    ),
+                  ],
+                ).value!,
+              ),
               color: AppTheme.primaryColor,
               description:
                   'You can count on our services from the comfort of your home, according to your needs, we perform installation, maintenance and fiber or flex duct systems, among other services.',
@@ -38,8 +59,28 @@ class MainCardsSection extends StatelessWidget {
             columnOrder: 1,
             rowFlex: 6,
             child: CustomCard(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 50, horizontal: 47),
+                padding: EdgeInsets.symmetric(
+                  vertical: ResponsiveValue(
+                    context,
+                    defaultValue: 50.0,
+                    valueWhen: [
+                      const Condition.smallerThan(
+                        name: 't999',
+                        value: 40.0,
+                      ),
+                    ],
+                  ).value!,
+                  horizontal: ResponsiveValue(
+                    context,
+                    defaultValue: 47.0,
+                    valueWhen: [
+                      const Condition.smallerThan(
+                        name: 'm600',
+                        value: 40.0,
+                      ),
+                    ],
+                  ).value!,
+                ),
                 color: AppTheme.secondaryColor,
                 height: 517,
                 width: ResponsiveWrapper.of(context).isSmallerThan(TABLET)

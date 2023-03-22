@@ -25,6 +25,10 @@ class OurServicesSection extends StatelessWidget {
                 name: TABLET,
                 value: 120.0,
               ),
+              const Condition.smallerThan(
+                name: 'm600',
+                value: 30.0,
+              ),
             ],
           ).value!,
         ),
