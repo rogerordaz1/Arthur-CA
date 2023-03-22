@@ -14,13 +14,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       builder: (context, child) => ResponsiveWrapper.builder(
-        ClampingScrollWrapper(child: child!),
+        child,
         maxWidth: 2500,
         minWidth: 300,
         defaultScale: false,
         breakpoints: [
           const ResponsiveBreakpoint.autoScaleDown(1920, name: DESKTOP),
           const ResponsiveBreakpoint.resize(1280, name: TABLET),
+          const ResponsiveBreakpoint.resize(1000, name: 't1000'),
+          const ResponsiveBreakpoint.autoScaleDown(999, name: 't999'),
           // const ResponsiveBreakpoint.resize(450, name: MOBILE),
         ],
         background: Container(

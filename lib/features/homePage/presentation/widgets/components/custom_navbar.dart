@@ -51,7 +51,6 @@ class CustomNavBar extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 0),
                 Text(
                   'Heating & Cooling',
                   style: GoogleFonts.inter(
@@ -79,6 +78,13 @@ class CustomNavBar extends StatelessWidget {
         NavBarItem(isActive: false, press: () {}, text: "Services"),
         const SizedBox(width: 46),
         NavBarItem(isActive: false, press: () {}, text: "Contact Us"),
+        const ResponsiveVisibility(
+            visibleWhen: [
+              Condition.smallerThan(name: 't999'),
+            ],
+            child: SizedBox(
+              width: 20,
+            )),
       ],
     );
   }

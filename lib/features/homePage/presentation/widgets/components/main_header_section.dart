@@ -17,7 +17,16 @@ class MainHeaderSection extends StatelessWidget {
       children: [
         Container(
           color: const Color(0xff282a3f).withOpacity(0.3),
-          height: 1092,
+          height: ResponsiveValue(
+            context,
+            defaultValue: 1092.0,
+            valueWhen: [
+              const Condition.smallerThan(
+                name: 't999',
+                value: 953.0,
+              ),
+            ],
+          ).value!,
           width: double.infinity,
           child: Container(
             decoration: BoxDecoration(
@@ -50,15 +59,44 @@ class ColumnSectionOne extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Padding(
+        Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: 110,
-            vertical: 19,
+            horizontal: ResponsiveValue(
+              context,
+              defaultValue: 110.0,
+              valueWhen: [
+                const Condition.smallerThan(
+                  name: 't999',
+                  value: 30.0,
+                ),
+              ],
+            ).value!,
+            vertical: ResponsiveValue(
+              context,
+              defaultValue: 19.0,
+              valueWhen: [
+                const Condition.smallerThan(
+                  name: 't999',
+                  value: 30.0,
+                ),
+              ],
+            ).value!,
           ),
-          child: CustomNavBar(),
+          child: const CustomNavBar(),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 143),
+          padding: EdgeInsets.symmetric(
+              horizontal: ResponsiveValue(
+                context,
+                defaultValue: 100.0,
+                valueWhen: [
+                  const Condition.smallerThan(
+                    name: 't999',
+                    value: 40.0,
+                  ),
+                ],
+              ).value!,
+              vertical: 143),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -133,9 +171,20 @@ class ColumnSectionOne extends StatelessWidget {
                     ]),
                 textAlign: TextAlign.start,
               ),
-              const Padding(
-                padding: EdgeInsets.only(top: 174),
-                child: ContactUsButton(),
+              Padding(
+                padding: EdgeInsets.only(
+                  top: ResponsiveValue(
+                    context,
+                    defaultValue: 174.0,
+                    valueWhen: [
+                      const Condition.smallerThan(
+                        name: 't999',
+                        value: 65.0,
+                      ),
+                    ],
+                  ).value!,
+                ),
+                child: const ContactUsButton(),
               ),
             ],
           ),

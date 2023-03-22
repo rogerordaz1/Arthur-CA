@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../../../../core/theme/app_theme.dart';
 
@@ -17,7 +19,8 @@ class OurServicesRowItem extends StatelessWidget {
     return Column(
       children: [
         Container(
-          height: 336,
+          width: 515,
+          height: 360,
           decoration: BoxDecoration(
             color: const Color(0xFFD9D9D9),
             image: DecorationImage(
@@ -29,13 +32,28 @@ class OurServicesRowItem extends StatelessWidget {
           ),
         ),
         Container(
-          height: 75,
-          width: double.infinity,
+          height: 70,
+          width: 515,
           color: AppTheme.secondaryColor,
           child: Center(
             child: Text(
               description,
-              style: AppTheme.whyChooseUsDescriptionTextStyle,
+              style: GoogleFonts.inter(
+                textStyle: TextStyle(
+                  color: AppTheme.primaryColor,
+                  fontSize: ResponsiveValue(
+                    context,
+                    defaultValue: 24.0,
+                    valueWhen: [
+                      const Condition.smallerThan(
+                        name: TABLET,
+                        value: 20.0,
+                      ),
+                    ],
+                  ).value!,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
             ),
           ),
         ),
