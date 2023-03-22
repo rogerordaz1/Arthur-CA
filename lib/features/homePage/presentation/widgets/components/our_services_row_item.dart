@@ -9,18 +9,23 @@ class OurServicesRowItem extends StatelessWidget {
     super.key,
     required this.photo,
     required this.description,
+    this.height = 360,
+    this.width = 515,
   });
 
   final String photo;
   final String description;
+
+  final double? height;
+  final double? width;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Container(
-          width: 515,
-          height: 360,
+          width: width,
+          height: height,
           decoration: BoxDecoration(
             color: const Color(0xFFD9D9D9),
             image: DecorationImage(
@@ -32,7 +37,16 @@ class OurServicesRowItem extends StatelessWidget {
           ),
         ),
         Container(
-          height: 70,
+          height: ResponsiveValue(
+            context,
+            defaultValue: 70.0,
+            valueWhen: [
+              const Condition.smallerThan(
+                name: 't999',
+                value: 50.0,
+              )
+            ],
+          ).value,
           width: 515,
           color: AppTheme.secondaryColor,
           child: Center(

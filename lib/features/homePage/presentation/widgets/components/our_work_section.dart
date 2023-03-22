@@ -56,7 +56,7 @@ class OurWorkSection extends StatelessWidget {
                     valueWhen: [
                       const Condition.smallerThan(
                         name: 't999',
-                        value: 250.0,
+                        value: 260.0,
                       )
                     ],
                   ).value,
