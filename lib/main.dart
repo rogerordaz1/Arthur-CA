@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:myapp/features/homePage/presentation/pages/home_web_page.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
-
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -23,6 +22,8 @@ class MyApp extends StatelessWidget {
           const ResponsiveBreakpoint.resize(1000, name: 't1000'),
           const ResponsiveBreakpoint.autoScaleDown(999, name: 't999'),
           const ResponsiveBreakpoint.resize(600, name: 'm600'),
+          const ResponsiveBreakpoint.resize(500, name: 'm500'),
+          const ResponsiveBreakpoint.autoScaleDown(499, name: MOBILE),
           // const ResponsiveBreakpoint.resize(450, name: MOBILE),
         ],
         background: Container(
