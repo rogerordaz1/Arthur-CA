@@ -1,6 +1,8 @@
 import 'package:easy_image_viewer/easy_image_viewer.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/features/homePage/presentation/bloc/homepage_bloc.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../../../../core/theme/app_theme.dart';
@@ -13,6 +15,7 @@ class OurServicesSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final homeBloc = context.read<HomepageBloc>();
     return Container(
       color: AppTheme.primaryColor,
       width: double.infinity,
@@ -34,6 +37,7 @@ class OurServicesSection extends StatelessWidget {
           ).value!,
         ),
         child: Column(
+          key: homeBloc.ourworkKey,
           children: [
             const SizedBox(height: 80),
             Text(

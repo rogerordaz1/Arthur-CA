@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) => ResponsiveWrapper.builder(
         child,
         maxWidth: 2500,
-        minWidth: 300,
+        minWidth: 150,
         defaultScale: false,
         breakpoints: [
           const ResponsiveBreakpoint.autoScaleDown(1920, name: DESKTOP),
