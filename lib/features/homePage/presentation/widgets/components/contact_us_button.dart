@@ -4,7 +4,7 @@ import 'package:responsive_framework/responsive_wrapper.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../../core/theme/app_theme.dart';
-import '../../../../../utils.dart';
+import '../../../../../core/utils/utils.dart';
 
 class ContactUsButton extends StatelessWidget {
   const ContactUsButton({

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/features/homePage/presentation/bloc/homepage_bloc.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../../../../core/theme/app_theme.dart';
@@ -100,7 +102,14 @@ class CustomNavBar extends StatelessWidget {
           hiddenWhen: const [
             Condition.smallerThan(name: 'm600'),
           ],
-          child: NavBarItem(isActive: true, press: () {}, text: "Home"),
+          child: NavBarItem(
+              isActive: true,
+              press: () {
+                context
+                    .read<HomepageBloc>()
+                    .add(const NavigateEvent(SelectedSection.home));
+              },
+              text: "Home"),
         ),
         const ResponsiveVisibility(
           hiddenWhen: [
@@ -112,7 +121,14 @@ class CustomNavBar extends StatelessWidget {
           hiddenWhen: const [
             Condition.smallerThan(name: 'm600'),
           ],
-          child: NavBarItem(isActive: false, press: () {}, text: "Services"),
+          child: NavBarItem(
+              isActive: false,
+              press: () {
+                context
+                    .read<HomepageBloc>()
+                    .add(const NavigateEvent(SelectedSection.ourWork));
+              },
+              text: "Services"),
         ),
         const ResponsiveVisibility(
           hiddenWhen: [
@@ -124,7 +140,14 @@ class CustomNavBar extends StatelessWidget {
           hiddenWhen: const [
             Condition.smallerThan(name: 'm600'),
           ],
-          child: NavBarItem(isActive: false, press: () {}, text: "Contact Us"),
+          child: NavBarItem(
+              isActive: false,
+              press: () {
+                context
+                    .read<HomepageBloc>()
+                    .add(const NavigateEvent(SelectedSection.contact));
+              },
+              text: "Contact Us"),
         ),
         const ResponsiveVisibility(
             visibleWhen: [
@@ -150,35 +173,38 @@ class NavBarItem extends StatelessWidget {
   final VoidCallback press;
   @override
   Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: isActive
-          ? GoogleFonts.inter(
-              textStyle: TextStyle(
-                color: AppTheme.whiteFcfcfc,
-                fontSize:
-                    ResponsiveValue(context, defaultValue: 24.0, valueWhen: [
-                  const Condition.smallerThan(
-                    name: TABLET,
-                    value: 20.0,
-                  ),
-                ]).value,
-                fontWeight: FontWeight.w700,
+    return GestureDetector(
+      onTap: press,
+      child: Text(
+        text,
+        style: isActive
+            ? GoogleFonts.inter(
+                textStyle: TextStyle(
+                  color: AppTheme.whiteFcfcfc,
+                  fontSize:
+                      ResponsiveValue(context, defaultValue: 24.0, valueWhen: [
+                    const Condition.smallerThan(
+                      name: TABLET,
+                      value: 20.0,
+                    ),
+                  ]).value,
+                  fontWeight: FontWeight.w700,
+                ),
+              )
+            : GoogleFonts.inter(
+                textStyle: TextStyle(
+                  color: AppTheme.knoActiveNavabarLink,
+                  fontSize:
+                      ResponsiveValue(context, defaultValue: 24.0, valueWhen: [
+                    const Condition.smallerThan(
+                      name: TABLET,
+                      value: 20.0,
+                    ),
+                  ]).value,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
-            )
-          : GoogleFonts.inter(
-              textStyle: TextStyle(
-                color: AppTheme.knoActiveNavabarLink,
-                fontSize:
-                    ResponsiveValue(context, defaultValue: 24.0, valueWhen: [
-                  const Condition.smallerThan(
-                    name: TABLET,
-                    value: 20.0,
-                  ),
-                ]).value,
-                fontWeight: FontWeight.w700,
-              ),
-            ),
+      ),
     );
   }
 }

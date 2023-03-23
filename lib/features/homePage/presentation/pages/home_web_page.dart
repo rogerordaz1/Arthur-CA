@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:myapp/core/theme/app_theme.dart';
+import 'package:myapp/features/homePage/presentation/bloc/homepage_bloc.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 import '../widgets/components/main_header_section.dart';
@@ -14,31 +16,18 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  ScrollController? scrollController;
-
-  @override
-  void initState() {
-    scrollController = ScrollController();
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    scrollController!.dispose();
-    super.dispose();
-  }
-
   @override
   Widget build(BuildContext context) {
+    final homeBloc = context.read<HomepageBloc>();
     return Scaffold(
       backgroundColor: AppTheme.answerColor,
       body: Scrollbar(
-        controller: scrollController,
+        controller: homeBloc.scrollController,
         child: SingleChildScrollView(
-          controller: scrollController,
+          controller: homeBloc.scrollController,
           child: Column(
             children: [
-              const MainHeaderSection(),
+              MainHeaderSection(key: homeBloc.homeKey),
               Transform.translate(
                 offset: const Offset(0, -100),
                 child: Padding(
@@ -104,12 +93,12 @@ class _HomePageState extends State<HomePage> {
                 ),
                 child: const WhyChooseUsSection(),
               ),
-              const OurServicesSection(),
+              OurServicesSection(key: homeBloc.ourworkKey),
               const EmergencyServiceSection(),
               ResponsiveVisibility(hiddenWhen: const [
                 Condition.smallerThan(name: TABLET),
               ], child: OurWorkSection(list: list)),
-              const FooterSeccion(),
+              FooterSeccion(key: homeBloc.contactKey),
             ],
           ),
         ),

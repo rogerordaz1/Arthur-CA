@@ -6,3 +6,19 @@ abstract class HomepageEvent extends Equatable {
   @override
   List<Object> get props => [];
 }
+
+enum SelectedSection {
+  contact,
+  home,
+  ourWork;
+}
+
+class NavigateEvent extends HomepageEvent {
+  final SelectedSection section;
+
+ const NavigateEvent(this.section);
+
+ 
+  @override
+  List<Object> get props => [section];
+}
