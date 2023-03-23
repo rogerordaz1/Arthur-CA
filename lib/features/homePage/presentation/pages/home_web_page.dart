@@ -19,87 +19,89 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final homeBloc = context.read<HomepageBloc>();
-    return Scaffold(
-      backgroundColor: AppTheme.answerColor,
-      body: Scrollbar(
-        controller: homeBloc.scrollController,
-        child: SingleChildScrollView(
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: AppTheme.answerColor,
+        body: Scrollbar(
           controller: homeBloc.scrollController,
-          child: Column(
-            children: [
-              MainHeaderSection(key: homeBloc.homeKey),
-              Transform.translate(
-                offset: const Offset(0, -100),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: ResponsiveValue(
+          child: SingleChildScrollView(
+            controller: homeBloc.scrollController,
+            child: Column(
+              children: [
+                MainHeaderSection(key: homeBloc.homeKey),
+                Transform.translate(
+                  offset: const Offset(0, -100),
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: ResponsiveValue(
+                        context,
+                        defaultValue: 262.0,
+                        valueWhen: [
+                          const Condition.smallerThan(
+                            name: TABLET,
+                            value: 180.0,
+                          ),
+                          const Condition.smallerThan(
+                            name: 'm600',
+                            value: 18.0,
+                          ),
+                        ],
+                      ).value!,
+                    ),
+                    child: const MainCardsSection(),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                    left: ResponsiveValue(
                       context,
-                      defaultValue: 262.0,
+                      defaultValue: 202.0,
                       valueWhen: [
                         const Condition.smallerThan(
                           name: TABLET,
-                          value: 180.0,
+                          value: 100.0,
                         ),
                         const Condition.smallerThan(
                           name: 'm600',
-                          value: 18.0,
+                          value: 50.0,
+                        ),
+                      ],
+                    ).value!,
+                    right: ResponsiveValue(
+                      context,
+                      defaultValue: 202.0,
+                      valueWhen: [
+                        const Condition.smallerThan(
+                          name: TABLET,
+                          value: 100.0,
+                        ),
+                        const Condition.smallerThan(
+                          name: 'm600',
+                          value: 50.0,
+                        ),
+                      ],
+                    ).value!,
+                    bottom: ResponsiveValue(
+                      context,
+                      defaultValue: 100.0,
+                      valueWhen: [
+                        const Condition.smallerThan(
+                          name: 'm600',
+                          value: 250.0,
                         ),
                       ],
                     ).value!,
                   ),
-                  child: const MainCardsSection(),
+                  child: const WhyChooseUsSection(),
                 ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                  left: ResponsiveValue(
-                    context,
-                    defaultValue: 202.0,
-                    valueWhen: [
-                      const Condition.smallerThan(
-                        name: TABLET,
-                        value: 100.0,
-                      ),
-                      const Condition.smallerThan(
-                        name: 'm600',
-                        value: 50.0,
-                      ),
-                    ],
-                  ).value!,
-                  right: ResponsiveValue(
-                    context,
-                    defaultValue: 202.0,
-                    valueWhen: [
-                      const Condition.smallerThan(
-                        name: TABLET,
-                        value: 100.0,
-                      ),
-                      const Condition.smallerThan(
-                        name: 'm600',
-                        value: 50.0,
-                      ),
-                    ],
-                  ).value!,
-                  bottom: ResponsiveValue(
-                    context,
-                    defaultValue: 100.0,
-                    valueWhen: [
-                      const Condition.smallerThan(
-                        name: 'm600',
-                        value: 250.0,
-                      ),
-                    ],
-                  ).value!,
-                ),
-                child: const WhyChooseUsSection(),
-              ),
-              const OurServicesSection(),
-              const EmergencyServiceSection(),
-              ResponsiveVisibility(hiddenWhen: const [
-                Condition.smallerThan(name: TABLET),
-              ], child: OurWorkSection(list: list)),
-              const FooterSeccion(),
-            ],
+                const OurServicesSection(),
+                const EmergencyServiceSection(),
+                ResponsiveVisibility(hiddenWhen: const [
+                  Condition.smallerThan(name: TABLET),
+                ], child: OurWorkSection(list: list)),
+                const FooterSeccion(),
+              ],
+            ),
           ),
         ),
       ),
