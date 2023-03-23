@@ -1,3 +1,4 @@
+import 'package:easy_image_viewer/easy_image_viewer.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -64,10 +65,18 @@ class OurServicesSection extends StatelessWidget {
               layout: ResponsiveWrapper.of(context).isSmallerThan(TABLET)
                   ? ResponsiveRowColumnType.COLUMN
                   : ResponsiveRowColumnType.ROW,
-              children: const [
+              children: [
                 ResponsiveRowColumnItem(
                   rowFlex: 1,
                   child: OurServicesRowItem(
+                    press: () {
+                      final imageProvider =
+                          Image.asset("assets/image2.JPG").image;
+                      showImageViewer(
+                        context,
+                        imageProvider,
+                      );
+                    },
                     photo: 'assets/image2.JPG',
                     description: 'Machine installation',
                   ),
@@ -77,13 +86,30 @@ class OurServicesSection extends StatelessWidget {
                   child: OurServicesRowItem(
                     photo: 'assets/image4.JPG',
                     description: 'Ductwork',
+                    press: () {
+                      final imageProvider =
+                          Image.asset("assets/image4.JPG").image;
+                      showImageViewer(
+                        context,
+                        imageProvider,
+                      );
+                    },
                   ),
                 ),
                 ResponsiveRowColumnItem(
                   rowFlex: 1,
                   child: OurServicesRowItem(
-                      photo: 'assets/image3.JPG',
-                      description: 'Maintenance and others'),
+                    photo: 'assets/image3.JPG',
+                    description: 'Maintenance and others',
+                    press: () {
+                      final imageProvider =
+                          Image.asset("assets/image3.JPG").image;
+                      showImageViewer(
+                        context,
+                        imageProvider,
+                      );
+                    },
+                  ),
                 ),
               ],
             ),
