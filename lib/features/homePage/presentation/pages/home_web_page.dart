@@ -14,10 +14,22 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  ScrollController? scrollController;
+
+  @override
+  void initState() {
+    scrollController = ScrollController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    scrollController!.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
-    ScrollController scrollController = ScrollController();
-
     return Scaffold(
       backgroundColor: AppTheme.answerColor,
       body: Scrollbar(
@@ -83,7 +95,6 @@ class _HomePageState extends State<HomePage> {
                     context,
                     defaultValue: 100.0,
                     valueWhen: [
-                      
                       const Condition.smallerThan(
                         name: 'm600',
                         value: 250.0,
@@ -95,7 +106,9 @@ class _HomePageState extends State<HomePage> {
               ),
               const OurServicesSection(),
               const EmergencyServiceSection(),
-              OurWorkSection(list: list),
+              ResponsiveVisibility(hiddenWhen: const [
+                Condition.smallerThan(name: TABLET),
+              ], child: OurWorkSection(list: list)),
               const FooterSeccion(),
             ],
           ),

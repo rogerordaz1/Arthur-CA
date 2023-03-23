@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../widgets.dart';
 
 class FooterSeccion extends StatelessWidget {
@@ -26,16 +27,27 @@ class RowBoxMinRectangle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(
-          height: 50,
-          width: 50,
-          color: Colors.white,
+        GestureDetector(
+          onTap: () => launchUrlwhassapp(),
+          child: SizedBox(
+            height: 50,
+            width: 50,
+            // color: Colors.white,
+            child: Image.asset(
+              "assets/whatsapp.png",
+            ),
+          ),
         ),
         const SizedBox(width: 27),
-        Container(
-          height: 50,
-          width: 50,
-          color: Colors.white,
+        GestureDetector(
+          onTap: () => launchUrlfacebook(),
+          child: SizedBox(
+            height: 50,
+            width: 50,
+            child: Image.asset(
+              "assets/facebook.png",
+            ),
+          ),
         )
       ],
     );
@@ -56,5 +68,26 @@ class Picture extends StatelessWidget {
           "assets/footer_foto.jpg",
           fit: BoxFit.cover,
         ));
+  }
+}
+
+Future<void> launchUrlwhassapp() async {
+  final Uri url = Uri.parse('https://wa.me/18135030921');
+
+  if (!await launchUrl(url)) {
+    throw Exception('Could not launch $url');
+  }
+
+  ///////////
+  ////////
+  //////
+}
+
+Future<void> launchUrlfacebook() async {
+  final Uri url = Uri.parse(
+      'https://www.facebook.com/profile.php?id=100090191887739&mibextid=LQQJ4d');
+
+  if (!await launchUrl(url)) {
+    throw Exception('Could not launch $url');
   }
 }

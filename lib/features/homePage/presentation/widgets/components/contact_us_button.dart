@@ -39,7 +39,7 @@ class ContactUsButton extends StatelessWidget {
           backgroundColor: AppTheme.secondaryColor,
         ),
         onPressed: () async {
-          await LaunchUrl();
+          await launchUrlmail();
         },
         child: Center(
           child: Text(
@@ -63,7 +63,7 @@ class ContactUsButton extends StatelessWidget {
   }
 }
 
-Future<void> LaunchUrl() async {
+Future<void> launchUrlmail() async {
   final Uri params = Uri(
     scheme: 'mailto',
     path: 'arthurhvac13@gmail.com',
