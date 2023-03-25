@@ -143,7 +143,7 @@ class FooterPart1 extends StatelessWidget {
                       ).value!,
                     ),
                     child: Image.asset(
-                      'assets/arturo2.png',
+                      'assets/arturo2.webp',
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -224,7 +224,7 @@ class FooterPart1 extends StatelessWidget {
                       ).value!,
                     ),
                     child: Image.asset(
-                      'assets/arturo2.png',
+                      'assets/arturo2.webp',
                       fit: BoxFit.cover,
                     ),
                   ),

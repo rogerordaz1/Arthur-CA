@@ -10,7 +10,7 @@ List<List<Widget>> list = [
         child: const OurServicesRowItem(
           //   height: 250,
           height: 250,
-          photo: 'assets/image1.JPG',
+          photo: 'assets/image1.webp',
           description: 'Machine installation',
         ),
       ),
@@ -21,7 +21,7 @@ List<List<Widget>> list = [
         child: const OurServicesRowItem(
           //   height: 250,
           height: 250,
-          photo: 'assets/image2.JPG',
+          photo: 'assets/image2.webp',
           description: 'Machine installation',
         ),
       ),
@@ -32,7 +32,7 @@ List<List<Widget>> list = [
         child: const OurServicesRowItem(
           //   height: 250,
           height: 250,
-          photo: 'assets/image3.JPG',
+          photo: 'assets/image3.webp',
           description: 'Machine installation',
         ),
       ),
@@ -43,7 +43,7 @@ List<List<Widget>> list = [
         child: const OurServicesRowItem(
           //  height: 250,
           height: 250,
-          photo: 'assets/image4.JPG',
+          photo: 'assets/image4.webp',
           description: 'Machine installation',
         ),
       ),
@@ -54,7 +54,7 @@ List<List<Widget>> list = [
       child: Container(
         padding: const EdgeInsets.only(right: 10, left: 10),
         child: const OurServicesRowItem(
-          photo: 'assets/image5.JPG',
+          photo: 'assets/image5.webp',
           // height: 250,
           height: 250,
 
@@ -66,7 +66,7 @@ List<List<Widget>> list = [
       child: Container(
         padding: const EdgeInsets.only(right: 10, left: 10),
         child: const OurServicesRowItem(
-          photo: 'assets/image6.JPG',
+          photo: 'assets/image6.webp',
           //  height: 250,
           height: 250,
 
@@ -78,7 +78,7 @@ List<List<Widget>> list = [
       child: Container(
         padding: const EdgeInsets.only(right: 10, left: 10),
         child: const OurServicesRowItem(
-          photo: 'assets/image7.JPG',
+          photo: 'assets/image7.webp',
           //  height: 250,
           height: 250,
 
@@ -90,7 +90,7 @@ List<List<Widget>> list = [
       child: Container(
         padding: const EdgeInsets.only(right: 10, left: 10),
         child: const OurServicesRowItem(
-          photo: 'assets/image8.JPG',
+          photo: 'assets/image8.webp',
           //  height: 250,
           height: 250,
 

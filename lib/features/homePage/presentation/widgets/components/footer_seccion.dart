@@ -65,7 +65,7 @@ class Picture extends StatelessWidget {
         height: 1000,
         width: MediaQuery.of(context).size.width,
         child: Image.asset(
-          "assets/footer_foto.jpg",
+          "assets/footer_foto.webp",
           fit: BoxFit.cover,
         ));
   }
