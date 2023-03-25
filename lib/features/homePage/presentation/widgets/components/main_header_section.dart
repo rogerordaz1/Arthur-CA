@@ -37,8 +37,8 @@ class MainHeaderSection extends StatelessWidget {
               image: DecorationImage(
                   image: AssetImage(
                     ResponsiveWrapper.of(context).isSmallerThan(TABLET)
-                        ? 'assets/fondo-movil.jpg'
-                        : 'assets/fondoArturo.jpg',
+                        ? 'assets/fondo-movil.webp'
+                        : 'assets/fondoArturo.webp',
                   ),
                   fit: BoxFit.cover),
             ),

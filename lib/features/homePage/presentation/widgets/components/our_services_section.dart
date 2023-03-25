@@ -75,24 +75,24 @@ class OurServicesSection extends StatelessWidget {
                   child: OurServicesRowItem(
                     press: () {
                       final imageProvider =
-                          Image.asset("assets/image2.JPG").image;
+                          Image.asset("assets/image2.webp").image;
                       showImageViewer(
                         context,
                         imageProvider,
                       );
                     },
-                    photo: 'assets/image2.JPG',
+                    photo: 'assets/image2.webp',
                     description: 'Machine installation',
                   ),
                 ),
                 ResponsiveRowColumnItem(
                   rowFlex: 1,
                   child: OurServicesRowItem(
-                    photo: 'assets/image4.JPG',
+                    photo: 'assets/image4.webp',
                     description: 'Ductwork',
                     press: () {
                       final imageProvider =
-                          Image.asset("assets/image4.JPG").image;
+                          Image.asset("assets/image4.webp").image;
                       showImageViewer(
                         context,
                         imageProvider,
@@ -103,11 +103,11 @@ class OurServicesSection extends StatelessWidget {
                 ResponsiveRowColumnItem(
                   rowFlex: 1,
                   child: OurServicesRowItem(
-                    photo: 'assets/image3.JPG',
+                    photo: 'assets/image3.webp',
                     description: 'Maintenance and others',
                     press: () {
                       final imageProvider =
-                          Image.asset("assets/image3.JPG").image;
+                          Image.asset("assets/image3.webp").image;
                       showImageViewer(
                         context,
                         imageProvider,

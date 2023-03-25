@@ -123,7 +123,7 @@ class EmergencyServiceSection extends StatelessWidget {
                 ],
               ).value!,
               child: Image.asset(
-                'assets/truck.png',
+                'assets/truck.webp',
                 fit: BoxFit.fill,
               ),
             ),

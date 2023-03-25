@@ -60,8 +60,8 @@ class OurWorkSection extends StatelessWidget {
                       )
                     ],
                   ).value,
-                  autoPlay: true,
-                  enableInfiniteScroll: true,
+                  autoPlay: false,
+                  enableInfiniteScroll: false,
                   initialPage: 0,
                   viewportFraction: 1,
                   autoPlayInterval: const Duration(seconds: 8)),
