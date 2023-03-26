@@ -167,7 +167,7 @@ class ColumnSectionOne extends StatelessWidget {
               RichText(
                 text: TextSpan(
                     text:
-                        "Our company focuses on the satisfaction\nof ourcustomers with quality services and\nguarantee at all times.",
+                        "Our company focuses on the satisfaction\nof our customers with quality services and\nguarantee at all times.",
                     style: GoogleFonts.inter(
                       textStyle: TextStyle(
                         color: AppTheme.whiteFcfcfc,
