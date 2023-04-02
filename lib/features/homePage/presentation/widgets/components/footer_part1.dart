@@ -157,7 +157,11 @@ class FooterPart1 extends StatelessWidget {
                       children: [
                         const Text(
                           "Contact us",
-                          style: TextStyle(fontSize: 32, color: Colors.white),
+                          style: TextStyle(
+                            fontSize: 32,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                         const SizedBox(height: 52),
                         RichText(
@@ -239,7 +243,10 @@ class FooterPart1 extends StatelessWidget {
                         const SizedBox(height: 50),
                         const Text(
                           "Contact us",
-                          style: TextStyle(fontSize: 34, color: Colors.white),
+                          style: TextStyle(
+                              fontSize: 34,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
                         ),
                         const SizedBox(height: 50),
                         RichText(
@@ -304,7 +311,9 @@ class FooterPart1 extends StatelessWidget {
                               const Text(
                                 "Contact us",
                                 style: TextStyle(
-                                    fontSize: 36, color: Colors.white),
+                                    fontSize: 36,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
                               ),
                               const SizedBox(height: 50),
                               RichText(

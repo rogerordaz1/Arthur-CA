@@ -38,7 +38,7 @@ class MainHeaderSection extends StatelessWidget {
                   image: AssetImage(
                     ResponsiveWrapper.of(context).isSmallerThan(TABLET)
                         ? 'assets/fondo-movil.webp'
-                        : 'assets/fondoArturo.webp',
+                        : 'assets/fondoArturo.jpg',
                   ),
                   fit: BoxFit.cover),
             ),
@@ -118,7 +118,7 @@ class ColumnSectionOne extends StatelessWidget {
               valueWhen: [
                 const Condition.smallerThan(
                   name: 'm600',
-                  value: 133.0,
+                  value: 100.0,
                 ),
               ],
             ).value!,
@@ -167,7 +167,7 @@ class ColumnSectionOne extends StatelessWidget {
               RichText(
                 text: TextSpan(
                     text:
-                        "Our company focuses on the satisfaction\nof ourcustomers with quality services and\nguarantee at all times.",
+                        "Our company focuses on the satisfaction\nof our customers with quality services and\nguarantee at all times.",
                     style: GoogleFonts.inter(
                       textStyle: TextStyle(
                         color: AppTheme.whiteFcfcfc,

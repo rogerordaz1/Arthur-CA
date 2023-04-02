@@ -29,9 +29,12 @@ class RowBoxMinRectangle extends StatelessWidget {
       children: [
         GestureDetector(
           onTap: () => launchUrlwhassapp(),
-          child: SizedBox(
-            height: 50,
-            width: 50,
+          child: Container(
+            height: 80,
+            width: 80,
+            decoration: const BoxDecoration(
+                color: Colors.black,
+                borderRadius: BorderRadius.all(Radius.circular(10))),
             // color: Colors.white,
             child: Image.asset(
               "assets/whatsapp.png",

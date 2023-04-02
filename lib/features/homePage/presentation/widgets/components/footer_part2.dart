@@ -60,49 +60,6 @@ class FooterPart2 extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  "ARTHUR A/C",
-                  style: GoogleFonts.bebasNeue(
-                    textStyle: TextStyle(
-                      color: AppTheme.commonColorWithe,
-                      textBaseline: TextBaseline.ideographic,
-                      fontSize: ResponsiveValue(
-                        context,
-                        defaultValue: 70.0,
-                        valueWhen: [
-                          const Condition.smallerThan(
-                            name: 'm600',
-                            value: 40.0,
-                          )
-                        ],
-                      ).value!,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                ),
-                Text(
-                  "Heating & Cooling",
-                  style: GoogleFonts.inter(
-                    textStyle: TextStyle(
-                      color: AppTheme.commonColorWithe,
-                      textBaseline: TextBaseline.ideographic,
-                      fontSize: ResponsiveValue(
-                        context,
-                        defaultValue: 24.0,
-                        valueWhen: [
-                          const Condition.smallerThan(
-                            name: 'm600',
-                            value: 20.0,
-                          )
-                        ],
-                      ).value!,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 70,
-                ),
                 RichText(
                   text: TextSpan(
                     text:
@@ -243,69 +200,55 @@ class FooterPart2 extends StatelessWidget {
                     ],
                   ).value!,
                 ),
-                const Text(
-                  "ARTHUR A/C",
-                  style: TextStyle(color: Colors.white, fontSize: 38),
-                ),
-                const Text(
-                  "Heating & Cooling",
-                  style: TextStyle(color: Colors.white, fontSize: 22),
-                ),
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 850),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SizedBox(
-                    height: 70,
-                  ),
-                  Expanded(
-                    child: SizedBox(
-                        child: RichText(
-                      text: TextSpan(
-                          text:
-                              "We are a development team specialized in creating\nwebsites and mobile applications. We work for and with\nthe client, we guarantee a quality service of excellence.\n",
-                          style: GoogleFonts.inter(
-                            textStyle: const TextStyle(
-                              color: AppTheme.whiteFcfcfc,
-                              fontSize: 24,
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ),
-                          children: const [
-                            TextSpan(
-                              text: 'Visit our website and contact us',
-                              style: TextStyle(
-                                color: AppTheme.whiteFcfcfc,
-                                fontSize: 24,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            )
-                          ]),
-                      //  textAlign: TextAlign.start,
-                    )),
-                  ),
-                  Expanded(
-                    child: Row(
-                      children: const [
-                        Text(
-                          "Code Genius",
-                          style: TextStyle(color: Colors.white, fontSize: 24),
-                        ),
-                        SizedBox(
-                          width: 100,
-                        ),
-                        Text(
-                          "codegenius98@gmail.com",
-                          style: TextStyle(color: Colors.white, fontSize: 24),
-                        ),
-                      ],
+            Row(
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    Text(
+                      "Code Genius",
+                      style: TextStyle(color: Colors.white, fontSize: 24),
                     ),
-                  )
-                ],
-              ),
+                    SizedBox(
+                      height: 25,
+                    ),
+                    Text(
+                      "codegenius98@gmail.com",
+                      style: TextStyle(color: Colors.white, fontSize: 24),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  width: 690,
+                ),
+                SizedBox(
+                    child: RichText(
+                  text: TextSpan(
+                      text:
+                          "We are a development team specialized in creating\nwebsites and mobile applications. We work for and with\nthe client, we guarantee a quality service of excellence.\n",
+                      style: GoogleFonts.inter(
+                        textStyle: const TextStyle(
+                          color: AppTheme.whiteFcfcfc,
+                          fontSize: 24,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      children: const [
+                        TextSpan(
+                          text: 'Visit our website and contact us',
+                          style: TextStyle(
+                            color: AppTheme.whiteFcfcfc,
+                            fontSize: 24,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        )
+                      ]),
+                  //  textAlign: TextAlign.start,
+                )),
+              ],
             ),
             // const SizedBox(
             //   width: 1000,

@@ -96,9 +96,14 @@ class _HomePageState extends State<HomePage> {
                 ),
                 const OurServicesSection(),
                 const EmergencyServiceSection(),
-                ResponsiveVisibility(hiddenWhen: const [
-                  Condition.smallerThan(name: TABLET),
-                ], child: OurWorkSection(list: list)),
+                ResponsiveVisibility(
+                  hiddenWhen: const [
+                    Condition.smallerThan(
+                      name: TABLET,
+                    ),
+                  ],
+                  child: OurWorkSection(list: list),
+                ),
                 const FooterSeccion(),
               ],
             ),

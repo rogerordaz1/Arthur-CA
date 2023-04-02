@@ -48,7 +48,7 @@ class MainCardsSection extends StatelessWidget {
               color: AppTheme.primaryColor,
               description:
                   'You can count on our services from the comfort of your home, according to your needs, we perform installation, maintenance and fiber or flex duct systems, among other services.',
-              height: 449,
+              height: 400,
               width: ResponsiveWrapper.of(context).isSmallerThan(TABLET)
                   ? 550
                   : null,
@@ -82,7 +82,7 @@ class MainCardsSection extends StatelessWidget {
                   ).value!,
                 ),
                 color: AppTheme.secondaryColor,
-                height: 517,
+                height: 480,
                 width: ResponsiveWrapper.of(context).isSmallerThan(TABLET)
                     ? 550
                     : null,
@@ -98,7 +98,7 @@ class MainCardsSection extends StatelessWidget {
               color: AppTheme.primaryColor,
               description:
                   'You can count on us for your business, according to your needs, we carry out installation, maintenance and rigid duct systems (metal), fiber, among other services.',
-              height: 449,
+              height: 400,
               width: ResponsiveWrapper.of(context).isSmallerThan(TABLET)
                   ? 550
                   : null,
