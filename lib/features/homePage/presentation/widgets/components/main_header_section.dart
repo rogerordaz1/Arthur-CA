@@ -118,7 +118,7 @@ class ColumnSectionOne extends StatelessWidget {
               valueWhen: [
                 const Condition.smallerThan(
                   name: 'm600',
-                  value: 133.0,
+                  value: 100.0,
                 ),
               ],
             ).value!,

@@ -9,7 +9,7 @@ List<List<Widget>> list = [
         padding: const EdgeInsets.only(right: 10, left: 10),
         child: const OurServicesRowItem(
           //   height: 250,
-          height: 250,
+          height: 300,
           photo: 'assets/image1.webp',
           description: 'Machine installation',
         ),
@@ -20,7 +20,7 @@ List<List<Widget>> list = [
         padding: const EdgeInsets.only(right: 10, left: 10),
         child: const OurServicesRowItem(
           //   height: 250,
-          height: 250,
+          height: 300,
           photo: 'assets/image2.webp',
           description: 'Machine installation',
         ),
@@ -31,7 +31,7 @@ List<List<Widget>> list = [
         padding: const EdgeInsets.only(right: 10, left: 10),
         child: const OurServicesRowItem(
           //   height: 250,
-          height: 250,
+          height: 300,
           photo: 'assets/image3.webp',
           description: 'Maintenance',
         ),
@@ -42,7 +42,7 @@ List<List<Widget>> list = [
         padding: const EdgeInsets.only(right: 10, left: 10),
         child: const OurServicesRowItem(
           //  height: 250,
-          height: 250,
+          height: 300,
           photo: 'assets/image4.webp',
           description: 'Ductwork',
         ),
@@ -56,7 +56,7 @@ List<List<Widget>> list = [
         child: const OurServicesRowItem(
           photo: 'assets/image5.webp',
           // height: 250,
-          height: 250,
+          height: 300,
 
           description: 'Maintenance',
         ),
@@ -68,7 +68,7 @@ List<List<Widget>> list = [
         child: const OurServicesRowItem(
           photo: 'assets/image6.webp',
           //  height: 250,
-          height: 250,
+          height: 300,
 
           description: 'Maintenance',
         ),
@@ -80,7 +80,7 @@ List<List<Widget>> list = [
         child: const OurServicesRowItem(
           photo: 'assets/image7.webp',
           //  height: 250,
-          height: 250,
+          height: 300,
 
           description: 'Machine installation',
         ),
@@ -92,7 +92,7 @@ List<List<Widget>> list = [
         child: const OurServicesRowItem(
           photo: 'assets/image8.webp',
           //  height: 250,
-          height: 250,
+          height: 300,
 
           description: 'Machine installation',
         ),
