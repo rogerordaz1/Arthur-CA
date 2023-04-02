@@ -51,7 +51,7 @@ class CustomNavBar extends StatelessWidget {
                   ),
                   child: Text(
                     'ARTHUR A/C',
-                    style: GoogleFonts.bebasNeue(
+                    style: GoogleFonts.inter(
                       textStyle: TextStyle(
                         color: const Color(0xFFFCFCFC),
                         fontSize: ResponsiveValue(context,
